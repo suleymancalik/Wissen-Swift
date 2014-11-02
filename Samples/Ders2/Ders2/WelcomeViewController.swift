@@ -12,10 +12,12 @@ class WelcomeViewController: UIViewController {
 
     @IBOutlet weak var lblWelcome: UILabel!
     
+    var username:String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        lblWelcome.text = "Hoşgeldin: \(username)"
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,17 +27,45 @@ class WelcomeViewController: UIViewController {
     
     @IBAction func actionLogout(sender: AnyObject) {
         
-        dismissViewControllerAnimated(true, completion: nil)
+        
+        var alertController =
+        UIAlertController(title: "Çıkış Yapıyorsunuz", message: "Emin misiniz?", preferredStyle: UIAlertControllerStyle.Alert)
+        
+        var actionCancel = UIAlertAction(title: "Vazgeç", style: UIAlertActionStyle.Cancel, handler: nil)
+        alertController.addAction(actionCancel)
+        
+        var actionLogout = UIAlertAction(title: "Çıkış Yap", style: UIAlertActionStyle.Destructive)
+            { (action) -> Void in
+            // Buraya çıkış kodunu yazacağız
+                self.dismissViewControllerAnimated(true, completion: nil)
+            //
+        }
+        alertController.addAction(actionLogout)
+        
+        presentViewController(alertController, animated: true, completion: nil)
+
+        
+        
+        
+        
+//
     }
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
