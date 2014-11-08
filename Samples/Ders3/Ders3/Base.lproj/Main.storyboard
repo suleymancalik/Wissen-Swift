@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qXi-oA-7li">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <scenes>
+        <!--Hoşgeldiniz-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="FirstVC" customModule="Ders3" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPu-lk-ccD">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.00019371711026738847" green="0.025558423359953397" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="8Wg-ko-xJM"/>
+                                    <constraint firstAttribute="height" constant="150" id="ZyD-Pv-d5u"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="100"/>
+                                <state key="normal" title="2">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="8Wg-ko-xJM"/>
+                                        <exclude reference="ZyD-Pv-d5u"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="8Wg-ko-xJM"/>
+                                        <include reference="ZyD-Pv-d5u"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="actOpenSecondVC" destination="vXZ-lx-hvc" eventType="touchUpInside" id="gUq-qf-rz5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oPu-lk-ccD" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="50" id="7AK-MC-VRw"/>
+                            <constraint firstAttribute="centerX" secondItem="oPu-lk-ccD" secondAttribute="centerX" id="DVZ-jq-qig"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="oPu-lk-ccD"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="7AK-MC-VRw"/>
+                                <exclude reference="DVZ-jq-qig"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="oPu-lk-ccD"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="7AK-MC-VRw"/>
+                                <include reference="DVZ-jq-qig"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="Hoşgeldiniz" id="ctG-3t-HYR"/>
+                    <connections>
+                        <segue destination="JLd-Yw-tBt" kind="show" identifier="FirstToSecond" id="h1k-cj-Stg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="762" y="175.5"/>
+        </scene>
+        <!--SecondVC-->
+        <scene sceneID="0Nb-5I-Hyv">
+            <objects>
+                <viewController id="JLd-Yw-tBt" customClass="SecondVC" customModule="Ders3" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cgj-P5-dhV"/>
+                        <viewControllerLayoutGuide type="bottom" id="qkb-IO-ppf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dGD-37-VEo">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.37548221085306588" green="0.54321203502102255" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ydi-v1-YXZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1443" y="175.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Mpe-z9-8AL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qXi-oA-7li" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HXT-lg-1NB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="gTA-T0-BlA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WM9-H5-yNb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="175.5"/>
+        </scene>
+    </scenes>
+</document>
