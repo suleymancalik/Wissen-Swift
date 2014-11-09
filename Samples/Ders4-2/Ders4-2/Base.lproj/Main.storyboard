@@ -17,24 +17,45 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DAD-Hm-lF1">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="100" width="600" height="500"/>
                             </scrollView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Veu-hF-LSy">
+                                <rect key="frame" x="18" y="30" width="564" height="31"/>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S3o-zl-5mY">
+                                <rect key="frame" x="250" y="68" width="100" height="30"/>
+                                <color key="backgroundColor" red="0.78433091210797024" green="1" blue="0.94430319339001267" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="GO0-g6-CU6"/>
+                                    <constraint firstAttribute="height" constant="30" id="XQy-M0-14e"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="20"/>
+                                <color key="textColor" red="0.082609144202602208" green="0.15665588706168054" blue="0.3900669642857143" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="S3o-zl-5mY" firstAttribute="top" secondItem="Veu-hF-LSy" secondAttribute="bottom" constant="8" id="1t7-HJ-Fwx"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="DAD-Hm-lF1" secondAttribute="bottom" id="6sJ-m1-9Ju"/>
-                            <constraint firstItem="DAD-Hm-lF1" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="FKh-rp-WwW"/>
+                            <constraint firstAttribute="centerX" secondItem="S3o-zl-5mY" secondAttribute="centerX" id="EOm-BT-S1E"/>
+                            <constraint firstItem="DAD-Hm-lF1" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="100" id="FKh-rp-WwW"/>
+                            <constraint firstItem="Veu-hF-LSy" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="10" id="Kzf-Ai-9N5"/>
                             <constraint firstAttribute="trailing" secondItem="DAD-Hm-lF1" secondAttribute="trailing" id="OWU-pc-Q85"/>
+                            <constraint firstAttribute="trailing" secondItem="Veu-hF-LSy" secondAttribute="trailing" constant="20" id="jNl-fJ-xkt"/>
+                            <constraint firstItem="Veu-hF-LSy" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="nIO-lt-KaR"/>
                             <constraint firstItem="DAD-Hm-lF1" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="zGU-09-nQn"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="lblZoomScale" destination="S3o-zl-5mY" id="mVk-vl-Ce8"/>
                         <outlet property="scrollView" destination="DAD-Hm-lF1" id="16X-fc-IU3"/>
+                        <outlet property="slider" destination="Veu-hF-LSy" id="80s-HN-13r"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="67" y="65"/>
+            <point key="canvasLocation" x="-370" y="-163"/>
         </scene>
     </scenes>
 </document>

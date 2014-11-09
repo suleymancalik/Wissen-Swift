@@ -405,6 +405,7 @@
 				C54834D91A0F666D009B5F2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C54834DA1A0F666D009B5F2E /* Build configuration list for PBXNativeTarget "Ders4-2Tests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +414,7 @@
 				C54834DC1A0F666D009B5F2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
