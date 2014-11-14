@@ -2,24 +2,28 @@
 
 import UIKit
 
+// Parametre almayan ve dönüş değeri olmayan fonksiyon
 func merhabaDe() {
     println("Merhaba!")
 }
 merhabaDe()
 
 
+// Bir Parametre alan ve dönüş değeri olmayan fonksiyon
 func merhabaDe(isim:String) {
     println("Merhaba: \(isim)")
 }
 merhabaDe("Suleyman")
 
 
+// İki Parametre alan ve dönüş değeri olmayan fonksiyon
 func birseySoyle(birsey:String , isim:String) {
     println(birsey + " " + isim)
 }
 birseySoyle("Selam", "Suleyman")
 
 
+// İki Parametre alan ve dönüş değeri Int olan fonksiyon
 func topla(ilkSayi:Int , ikinciSayi:Int) -> Int {
     return ilkSayi + ikinciSayi
 }
@@ -27,6 +31,7 @@ var toplam = topla(10, 4)
 println(toplam)
 
 
+// Int parametre alan ve Tuple dönen fonksiyon
 func ikiyeBol(sayi:Int) -> (Int,Int) {
     var bolum = sayi / 2
     var kalan = sayi % 2
