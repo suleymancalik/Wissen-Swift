@@ -75,16 +75,32 @@ class ViewController: UIViewController , UITableViewDataSource , UITableViewDele
     
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        var katilimci = katilimcilar[indexPath.row]
-        
-        var alert = UIAlertView(title: "Silinecek Kisi", message:katilimci.name, delegate:self, cancelButtonTitle: "Vazgec", otherButtonTitles: "Sil")
-        alert.show()
-        
-        // secilen satirin index'ini sakliyoruz
-        silinecekIndex = indexPath.row
+        //
     }
     
     
+    // MARK: Delete Methods
+    
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+
+        if editingStyle == .Delete {
+            
+            var katilimci = katilimcilar[indexPath.row]
+            
+            var alert = UIAlertView(title: "Silinecek Kisi", message:katilimci.name, delegate:self, cancelButtonTitle: "Vazgec", otherButtonTitles: "Sil")
+            alert.show()
+            
+            // secilen satirin index'ini sakliyoruz
+            silinecekIndex = indexPath.row
+        }
+    }
+    
+
     // MARK: - Alertview Methods
     
     
