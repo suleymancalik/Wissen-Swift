@@ -11,16 +11,27 @@ import UIKit
 class KatilimciCell: UITableViewCell {
 
     @IBOutlet var lblTitle:UILabel!
+    @IBOutlet weak var durumSwitch: UISwitch!
     
+    var delegate:KatilimciDelegate!
+    var currentIndex:Int = 0
+
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        durumSwitch.addTarget(self, action:Selector("durumDegisti"), forControlEvents: UIControlEvents.ValueChanged)
     }
-
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    
+    func durumDegisti() {
+        delegate.katilimciDurumuDegisti(currentIndex, yeniDurum:durumSwitch.on)
     }
-
+    
+    
 }
+
+
+
+
+
+

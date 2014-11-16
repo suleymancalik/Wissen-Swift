@@ -12,7 +12,7 @@ import UIKit
 // UITableViewDelegate   : TableView'in height ve didSelect'ini almaya yarar
 // UIAlertViewDelegate   : Alertview'de basilan butonu ogrenmemizi saglar
 
-class ViewController: UIViewController , UITableViewDataSource , UITableViewDelegate , UIAlertViewDelegate {
+class ViewController: UIViewController , UITableViewDataSource , UITableViewDelegate , UIAlertViewDelegate , KatilimciDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     var katilimcilar:Array<String> = [String]()
@@ -53,12 +53,7 @@ class ViewController: UIViewController , UITableViewDataSource , UITableViewDele
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
 
-        if indexPath.row % 2 == 0 {
-            return 44
-        }
-        else {
-            return 50
-        }
+        return 50
     }
     
     
@@ -68,21 +63,11 @@ class ViewController: UIViewController , UITableViewDataSource , UITableViewDele
         var index = indexPath.row
         var katilimciIsmi = katilimcilar[index]
         
-        if index % 2 == 0 {
-            // tableview'den cache'lenmis cell'i al
-            var cell = tableView.dequeueReusableCellWithIdentifier("KatilimciCell") as UITableViewCell
-            // cell'in icerigini duzenle
-            cell.textLabel.text = katilimciIsmi
-
-            // cell'i return et
-            return cell
-        }
-        else {
-            var cell = tableView.dequeueReusableCellWithIdentifier("CustomKatilimciCell") as KatilimciCell
-            cell.lblTitle.text = katilimciIsmi
-            return cell
-        }
         
+        var cell = tableView.dequeueReusableCellWithIdentifier("CustomKatilimciCell") as KatilimciCell
+        cell.lblTitle.text = katilimciIsmi
+        cell.delegate = self
+        return cell
     }
     
     
@@ -116,6 +101,16 @@ class ViewController: UIViewController , UITableViewDataSource , UITableViewDele
             tableView.reloadData()
 
         }
+    }
+    
+    
+    
+    // MARK: - KatilimciDelegate Methods
+    
+    
+    func katilimciDurumuDegisti(index: Int, yeniDurum: Bool) {
+        println("katilimciDurumuDegisti")
+        //
     }
     
 }

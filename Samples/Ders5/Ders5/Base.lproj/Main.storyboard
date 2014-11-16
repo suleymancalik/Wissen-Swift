@@ -45,16 +45,22 @@
                                                     <color key="textColor" red="1" green="0.5369962935" blue="0.51545512069999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iDi-Nf-DlV">
+                                                    <rect key="frame" x="521" y="6" width="51" height="31"/>
+                                                </switch>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="cJ2-mB-GEb" firstAttribute="leading" secondItem="scS-8E-GYL" secondAttribute="leading" id="0Qg-vO-teS"/>
                                                 <constraint firstAttribute="bottom" secondItem="cJ2-mB-GEb" secondAttribute="bottom" id="3vc-qS-px3"/>
+                                                <constraint firstAttribute="centerY" secondItem="iDi-Nf-DlV" secondAttribute="centerY" id="QNk-KE-ACN"/>
                                                 <constraint firstAttribute="trailing" secondItem="cJ2-mB-GEb" secondAttribute="trailing" id="RN1-5Z-csQ"/>
+                                                <constraint firstAttribute="trailing" secondItem="iDi-Nf-DlV" secondAttribute="trailing" constant="30" id="Vjl-am-JUz"/>
                                                 <constraint firstItem="cJ2-mB-GEb" firstAttribute="top" secondItem="scS-8E-GYL" secondAttribute="top" id="h3N-I0-Quo"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.7064039689781022" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
+                                            <outlet property="durumSwitch" destination="iDi-Nf-DlV" id="nFo-WR-k8C"/>
                                             <outlet property="lblTitle" destination="cJ2-mB-GEb" id="N8G-j4-71k"/>
                                         </connections>
                                     </tableViewCell>
