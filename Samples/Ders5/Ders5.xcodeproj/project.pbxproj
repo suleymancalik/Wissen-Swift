@@ -15,6 +15,7 @@
 		C5503A701A174F4A00D997E4 /* Ders5Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5503A6F1A174F4A00D997E4 /* Ders5Tests.swift */; };
 		C5503A7A1A176E4700D997E4 /* KatilimciCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5503A791A176E4700D997E4 /* KatilimciCell.swift */; };
 		C5503A7C1A1890B500D997E4 /* KatilimciDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5503A7B1A1890B500D997E4 /* KatilimciDelegate.swift */; };
+		C5503A7E1A18A11400D997E4 /* Katilimci.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5503A7D1A18A11400D997E4 /* Katilimci.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		C5503A6F1A174F4A00D997E4 /* Ders5Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ders5Tests.swift; sourceTree = "<group>"; };
 		C5503A791A176E4700D997E4 /* KatilimciCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KatilimciCell.swift; sourceTree = "<group>"; };
 		C5503A7B1A1890B500D997E4 /* KatilimciDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KatilimciDelegate.swift; sourceTree = "<group>"; };
+		C5503A7D1A18A11400D997E4 /* Katilimci.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Katilimci.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				C5503A571A174F4A00D997E4 /* Supporting Files */,
 				C5503A791A176E4700D997E4 /* KatilimciCell.swift */,
 				C5503A7B1A1890B500D997E4 /* KatilimciDelegate.swift */,
+				C5503A7D1A18A11400D997E4 /* Katilimci.swift */,
 			);
 			path = Ders5;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 				C5503A7C1A1890B500D997E4 /* KatilimciDelegate.swift in Sources */,
 				C5503A5C1A174F4A00D997E4 /* ViewController.swift in Sources */,
 				C5503A5A1A174F4A00D997E4 /* AppDelegate.swift in Sources */,
+				C5503A7E1A18A11400D997E4 /* Katilimci.swift in Sources */,
 				C5503A7A1A176E4700D997E4 /* KatilimciCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
