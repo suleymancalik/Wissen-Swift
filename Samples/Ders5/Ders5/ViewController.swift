@@ -111,7 +111,7 @@ class ViewController: UIViewController , UITableViewDataSource , UITableViewDele
     func katilimciDurumuDegisti(index: Int, yeniDurum: Bool) {
         println("katilimciDurumuDegisti")
         //
-    }
+    } 
     
 }
 
