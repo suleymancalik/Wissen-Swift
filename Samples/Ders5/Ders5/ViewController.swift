@@ -75,7 +75,7 @@ class ViewController: UIViewController , UITableViewDataSource , UITableViewDele
     
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        //
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
     
     
@@ -108,10 +108,7 @@ class ViewController: UIViewController , UITableViewDataSource , UITableViewDele
         if buttonIndex == 0 {
             // Vazgec butonuna basilmis
             
-            // deselectRowAtIndexPath methodu indexPath bekledigi icin
-            // indexPath olusturuyoruz
-            var indexPath = NSIndexPath(forRow:silinecekIndex, inSection:0)
-            tableView.deselectRowAtIndexPath(indexPath, animated:true)
+            tableView.reloadData()
         }
         else {
             // Sil butonuna basilmis
