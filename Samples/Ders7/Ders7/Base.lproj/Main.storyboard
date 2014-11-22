@@ -39,6 +39,7 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <gestureRecognizers/>
                                         <size key="customSize" width="100" height="100"/>
                                         <connections>
                                             <outlet property="picture" destination="9HQ-ND-Edm" id="L0r-zU-2pF"/>
@@ -86,7 +87,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="44" y="-281"/>
+            <point key="canvasLocation" x="-236" y="-322"/>
         </scene>
     </scenes>
 </document>
