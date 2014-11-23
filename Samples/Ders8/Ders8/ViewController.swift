@@ -41,7 +41,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         var coordinate:CLLocationCoordinate2D = location.coordinate
         
         // Kullanicinin 1000 metre cevresini kapsayacak sekilde alan olusturuyoruz
-        var region = MKCoordinateRegionMakeWithDistance(coordinate, 5000, 5000)
+        var region = MKCoordinateRegionMakeWithDistance(coordinate, 50, 50)
         
         // Haritanin olusturdugumuz alani gostermesini sagliyoruz
         mapView.setRegion(region, animated: true)
@@ -53,6 +53,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     
     func mapView(mapView: MKMapView!, didUpdateUserLocation userLocation: MKUserLocation!) {
         kullaniciyiGoster()
+    }
+    
+    func mapView(mapView: MKMapView!, didFailToLocateUserWithError error: NSError!) {
+        println("didFailToLocateUserWithError: \(error)")
     }
     
     
