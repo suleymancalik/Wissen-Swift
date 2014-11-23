@@ -9,15 +9,52 @@
 import UIKit
 import MapKit
 
-class ViewController: UIViewController, CLLocationManagerDelegate {
+class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
 
     var locationManager = CLLocationManager()
+    var mapView = MKMapView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         locationManager.delegate = self
+        mapView.delegate = self
+        
+        haritaEkle()
     }
+    
+    
+    func haritaEkle() {
+        
+        var mapSize = view.bounds.width
+        
+        mapView.frame = CGRect(x: 0, y: 20, width: mapSize, height: mapSize)
+        mapView.mapType = MKMapType.Hybrid
+        view.addSubview(mapView)
+    }
+    
+    
+    func kullaniciyiGoster() {
+        // haritadan kullanicinin konumunu aliyoruz.
+        var userLocation:MKUserLocation = mapView.userLocation
+        var location:CLLocation = userLocation.location
+        var coordinate:CLLocationCoordinate2D = location.coordinate
+        
+        // Kullanicinin 1000 metre cevresini kapsayacak sekilde alan olusturuyoruz
+        var region = MKCoordinateRegionMakeWithDistance(coordinate, 5000, 5000)
+        
+        // Haritanin olusturdugumuz alani gostermesini sagliyoruz
+        mapView.setRegion(region, animated: true)
+    }
+    
+    
+    
+    // MARK: Mapview Methods
+    
+    func mapView(mapView: MKMapView!, didUpdateUserLocation userLocation: MKUserLocation!) {
+        kullaniciyiGoster()
+    }
+    
     
     // MARK: LocationManager Methods
     
@@ -41,10 +78,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         else if status == CLAuthorizationStatus.AuthorizedWhenInUse || status == CLAuthorizationStatus.Authorized {
             // izin verilmis
             
-            // izin verilmisse burasi cagriliyor
-            println("Kullanici lokasyona izin verdi ")
-            
-            // lokasyonu kullanmaya basla
+            mapView.showsUserLocation = true
         }
         else {
             println("Kullanici lokasyona izin vermedi ")
