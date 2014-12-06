@@ -12,10 +12,10 @@ import MapKit
 class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
 
     @IBOutlet weak var mapview: MKMapView!
-    var locationManager = CLLocationManager()
+    var locationManager:CLLocationManager = CLLocationManager()
     
-    // 41.041994,29.009049    besiktas
-    // 41.0243174,28.9762317  galata
+    // 41.041994  , 29.009049    besiktas
+    // 41.0243174 , 28.9762317  galata
     
     
     override func viewDidLoad() {
@@ -24,6 +24,27 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         locationManager.delegate = self
         mapview.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+        
+        okullariGoster()
+    }
+    
+    
+    func okullariGoster() {
+        
+        var besiktasKampusu = CampusAnnotation()
+        besiktasKampusu.coordinate =
+            CLLocationCoordinate2D(latitude:41.041994, longitude: 29.009049)
+        besiktasKampusu.title = "Bahçeşehir Üniversitesi"
+        besiktasKampusu.subtitle = "Beşiktaş Kampüsü"
+        mapview.addAnnotation(besiktasKampusu)
+        
+        
+        var galataKampusu = CampusAnnotation()
+        galataKampusu.coordinate =
+            CLLocationCoordinate2D(latitude: 41.0243174, longitude: 28.9762317)
+        galataKampusu.title = "Bahçeşehir Üniversitesi"
+        galataKampusu.subtitle = "Galata Kampüsü"
+        mapview.addAnnotation(galataKampusu)
     }
     
     

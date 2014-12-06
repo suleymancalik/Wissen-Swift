@@ -14,6 +14,7 @@
 		C542C1271A32E8DC00BEBA29 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C542C1251A32E8DC00BEBA29 /* LaunchScreen.xib */; };
 		C542C1331A32E8DC00BEBA29 /* Ders9Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C542C1321A32E8DC00BEBA29 /* Ders9Tests.swift */; };
 		C542C13D1A32E8FA00BEBA29 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C542C13C1A32E8FA00BEBA29 /* MapKit.framework */; };
+		C5F3D8B01A32FE930051EC05 /* CampusAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F3D8AF1A32FE930051EC05 /* CampusAnnotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		C542C1311A32E8DC00BEBA29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C542C1321A32E8DC00BEBA29 /* Ders9Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ders9Tests.swift; sourceTree = "<group>"; };
 		C542C13C1A32E8FA00BEBA29 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		C5F3D8AF1A32FE930051EC05 /* CampusAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampusAnnotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 				C542C1231A32E8DC00BEBA29 /* Images.xcassets */,
 				C542C1251A32E8DC00BEBA29 /* LaunchScreen.xib */,
 				C542C11A1A32E8DC00BEBA29 /* Supporting Files */,
+				C5F3D8AF1A32FE930051EC05 /* CampusAnnotation.swift */,
 			);
 			path = Ders9;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C542C11F1A32E8DC00BEBA29 /* ViewController.swift in Sources */,
+				C5F3D8B01A32FE930051EC05 /* CampusAnnotation.swift in Sources */,
 				C542C11D1A32E8DC00BEBA29 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,6 +418,7 @@
 				C542C1381A32E8DC00BEBA29 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C542C1391A32E8DC00BEBA29 /* Build configuration list for PBXNativeTarget "Ders9Tests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +427,7 @@
 				C542C13B1A32E8DC00BEBA29 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
