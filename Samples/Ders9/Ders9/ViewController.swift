@@ -9,14 +9,11 @@
 import UIKit
 import MapKit
 
-class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
+class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate,  UIActionSheetDelegate {
 
     @IBOutlet weak var mapview: MKMapView!
     var locationManager:CLLocationManager = CLLocationManager()
-    
-    // 41.041994  , 29.009049    besiktas
-    // 41.0243174 , 28.9762317  galata
-    
+    var selectedCoordinate:CLLocationCoordinate2D?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -89,11 +86,28 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     
     func mapView(mapView: MKMapView!, annotationView view: MKAnnotationView!, calloutAccessoryControlTapped control: UIControl!) {
         
-        var coordinate = view.annotation.coordinate
-        var url = NSURL(string: "http://maps.apple.com/maps?q=\(coordinate.latitude),\(coordinate.longitude)")
-        UIApplication.sharedApplication().openURL(url!)
+        var actionsheet = UIActionSheet(title: "Kampüs Seçenekleri", delegate: self, cancelButtonTitle: "Vazgeç", destructiveButtonTitle: nil, otherButtonTitles: "Web Sayfası Aç", "Yol Tarifi Al")
+        actionsheet.showInView(self.view)
+        
+        selectedCoordinate = view.annotation.coordinate
     }
     
+    
+    // MARK: - Actionsheet Methods
+    
+    func actionSheet(actionSheet: UIActionSheet, clickedButtonAtIndex buttonIndex: Int) {
+        
+        switch buttonIndex {
+        case 1:
+            break
+        case 2:
+            var coordinate = selectedCoordinate!
+            var url = NSURL(string: "http://maps.apple.com/maps?q=\(coordinate.latitude),\(coordinate.longitude)")
+            UIApplication.sharedApplication().openURL(url!)
+        default:
+            break
+        }
+    }
 
     
     // MARK: - LocationManager Methods
