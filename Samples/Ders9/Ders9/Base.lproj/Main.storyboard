@@ -50,8 +50,29 @@
                     <view key="view" contentMode="scaleToFill" id="NvI-ID-4mr">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eWQ-gP-ERK">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="jaJ-1S-Yef">
+                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eWQ-gP-ERK" firstAttribute="top" secondItem="NvI-ID-4mr" secondAttribute="top" id="Ae9-0h-Hu0"/>
+                            <constraint firstAttribute="centerX" secondItem="jaJ-1S-Yef" secondAttribute="centerX" id="CXg-RB-r5a"/>
+                            <constraint firstItem="Vho-TT-sLu" firstAttribute="top" secondItem="eWQ-gP-ERK" secondAttribute="bottom" id="TJf-lH-v6g"/>
+                            <constraint firstAttribute="trailing" secondItem="eWQ-gP-ERK" secondAttribute="trailing" id="hUy-I3-1eV"/>
+                            <constraint firstItem="eWQ-gP-ERK" firstAttribute="leading" secondItem="NvI-ID-4mr" secondAttribute="leading" id="kUJ-qK-F8Q"/>
+                            <constraint firstAttribute="centerY" secondItem="jaJ-1S-Yef" secondAttribute="centerY" id="lxD-rM-eRd"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="spinner" destination="jaJ-1S-Yef" id="WuC-ch-Iqf"/>
+                        <outlet property="webView" destination="eWQ-gP-ERK" id="cWn-nP-NvI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jlb-9B-ZUt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

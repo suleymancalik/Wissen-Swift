@@ -8,17 +8,40 @@
 
 import UIKit
 
-class WebVC: UIViewController {
+class WebVC: UIViewController, UIWebViewDelegate {
 
+    var urlString:String!
+    @IBOutlet weak var webView: UIWebView!
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        if urlString != nil {
+            var url = NSURL(string: urlString)
+            var request = NSURLRequest(URL: url!)
+            webView.loadRequest(request)
+            
+            webView.delegate = self
+        }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+
+    // MARK: - Webview Methods
+    
+    //Webview icerigini basariyla yukledi
+    func webViewDidFinishLoad(webView: UIWebView) {
+        
+        // Spinner durdurulup ekrandan kaldiriliyor
+        spinner.stopAnimating()
+    }
+    
+    
+    func webView(webView: UIWebView, didFailLoadWithError error: NSError) {
+        
+        // Spinner durduruluyor ve onceki ekrana donuluyor
+        spinner.stopAnimating()
+        navigationController?.popViewControllerAnimated(true)
     }
     
 

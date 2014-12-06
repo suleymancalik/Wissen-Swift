@@ -45,6 +45,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     }
     
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "ShowWebVC" {
+            var webEkrani = segue.destinationViewController as WebVC
+            webEkrani.urlString = "http://www.bahcesehir.edu.tr"
+        }
+    }
     
     // MARK: - MapView Methods
     
