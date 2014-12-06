@@ -61,6 +61,39 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         
     }
     
+    
+    func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
+        if annotation is CampusAnnotation {
+            
+            let identifier = "KampusAnnotation"
+            var annView = mapview.dequeueReusableAnnotationViewWithIdentifier(identifier)
+
+            if annView == nil {
+                annView = MKAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+                annView.canShowCallout = true
+                
+                annView.rightCalloutAccessoryView = UIButton.buttonWithType(UIButtonType.DetailDisclosure) as UIView
+                
+                var buImage = UIImageView(image: UIImage(named: "bu"))
+                annView.leftCalloutAccessoryView = buImage
+            }
+            
+            annView.image = UIImage(named: "bu")
+            
+            return annView
+        }
+        else {
+            return nil
+        }
+    }
+    
+    func mapView(mapView: MKMapView!, annotationView view: MKAnnotationView!, calloutAccessoryControlTapped control: UIControl!) {
+        
+        var coordinate = view.annotation.coordinate
+        var url = NSURL(string: "http://maps.apple.com/maps?q=\(coordinate.latitude),\(coordinate.longitude)")
+        UIApplication.sharedApplication().openURL(url!)
+    }
+    
 
     
     // MARK: - LocationManager Methods
