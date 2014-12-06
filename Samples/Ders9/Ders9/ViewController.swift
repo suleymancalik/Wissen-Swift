@@ -99,7 +99,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         
         switch buttonIndex {
         case 1:
-            break
+            performSegueWithIdentifier("ShowWebVC", sender: nil)
         case 2:
             var coordinate = selectedCoordinate!
             var url = NSURL(string: "http://maps.apple.com/maps?q=\(coordinate.latitude),\(coordinate.longitude)")
