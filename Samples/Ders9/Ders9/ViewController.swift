@@ -44,6 +44,30 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         mapview.addAnnotation(galataKampusu)
     }
     
+    func adresiOgren() {
+        var geocoder = CLGeocoder()
+        var location = CLLocation(latitude: selectedCoordinate!.latitude, longitude: selectedCoordinate!.longitude)
+        geocoder.reverseGeocodeLocation(location, completionHandler: { (placemarks, error) -> Void in
+            
+            if error == nil {
+                for placemark in placemarks as [CLPlacemark] {
+                    println("country: \(placemark.country)")
+                    println("administrativeArea: \(placemark.administrativeArea)")
+                    println("locality: \(placemark.locality)")
+                    println("subLocality: \(placemark.subLocality)")
+                    println("thoroughfare: \(placemark.thoroughfare)")
+                    println("subThoroughfare: \(placemark.subThoroughfare)")
+                }
+                
+                
+//                println(placemarks)
+            }
+            else {
+                println("Geocode yapilamadi: \(error!)")
+            }
+            
+        })
+    }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "ShowWebVC" {
@@ -92,7 +116,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     
     func mapView(mapView: MKMapView!, annotationView view: MKAnnotationView!, calloutAccessoryControlTapped control: UIControl!) {
         
-        var actionsheet = UIActionSheet(title: "Kampüs Seçenekleri", delegate: self, cancelButtonTitle: "Vazgeç", destructiveButtonTitle: nil, otherButtonTitles: "Web Sayfası Aç", "Yol Tarifi Al")
+        var actionsheet = UIActionSheet(title: "Kampüs Seçenekleri", delegate: self, cancelButtonTitle: "Vazgeç", destructiveButtonTitle: nil, otherButtonTitles: "Web Sayfası Aç", "Yol Tarifi Al" , "Adresi Öğren")
         actionsheet.showInView(self.view)
         
         selectedCoordinate = view.annotation.coordinate
@@ -110,6 +134,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             var coordinate = selectedCoordinate!
             var url = NSURL(string: "http://maps.apple.com/maps?q=\(coordinate.latitude),\(coordinate.longitude)")
             UIApplication.sharedApplication().openURL(url!)
+        case 3:
+            adresiOgren()
         default:
             break
         }
