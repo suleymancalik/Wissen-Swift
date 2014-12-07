@@ -4,12 +4,6 @@ https://developer.apple.com/library/ios/navigation/
 // Tutorial'lar
 http://www.raywenderlich.com/
 
-// NSHipster
-http://nshipster.com/
-
-// obj.io
-http://www.objc.io/
-
 // iOS Dev Weekly
 https://iosdevweekly.com/
 
@@ -22,9 +16,15 @@ https://www.cocoacontrols.com/
 // Dependency Management
 http://cocoapods.org/
 
-
 // Image Cache
 https://github.com/Haneke/HanekeSwift
 
 // SVPRogressHUD
 https://github.com/TransitApp/SVProgressHUD
+
+// NSHipster
+http://nshipster.com/
+
+// obj.io
+http://www.objc.io/
+
