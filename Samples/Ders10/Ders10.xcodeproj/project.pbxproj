@@ -14,6 +14,9 @@
 		C5B058691A3444C20030BDDF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5B058671A3444C20030BDDF /* LaunchScreen.xib */; };
 		C5B058751A3444C20030BDDF /* Ders10Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B058741A3444C20030BDDF /* Ders10Tests.swift */; };
 		C5B0587F1A345B730030BDDF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B0587E1A345B730030BDDF /* User.swift */; };
+		C5B058871A3462E10030BDDF /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B058821A3462E10030BDDF /* SVIndefiniteAnimatedView.m */; };
+		C5B058881A3462E10030BDDF /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C5B058841A3462E10030BDDF /* SVProgressHUD.bundle */; };
+		C5B058891A3462E10030BDDF /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B058861A3462E10030BDDF /* SVProgressHUD.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,13 @@
 		C5B058731A3444C20030BDDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5B058741A3444C20030BDDF /* Ders10Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ders10Tests.swift; sourceTree = "<group>"; };
 		C5B0587E1A345B730030BDDF /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C5B058811A3462E10030BDDF /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
+		C5B058821A3462E10030BDDF /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
+		C5B058831A3462E10030BDDF /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
+		C5B058841A3462E10030BDDF /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		C5B058851A3462E10030BDDF /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		C5B058861A3462E10030BDDF /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		C5B0588A1A3463A80030BDDF /* Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridge.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +89,7 @@
 		C5B0585B1A3444C20030BDDF /* Ders10 */ = {
 			isa = PBXGroup;
 			children = (
+				C5B058801A3462E10030BDDF /* SVProgressHUD */,
 				C5B0585E1A3444C20030BDDF /* AppDelegate.swift */,
 				C5B058601A3444C20030BDDF /* ViewController.swift */,
 				C5B058621A3444C20030BDDF /* Main.storyboard */,
@@ -86,6 +97,7 @@
 				C5B058671A3444C20030BDDF /* LaunchScreen.xib */,
 				C5B0585C1A3444C20030BDDF /* Supporting Files */,
 				C5B0587E1A345B730030BDDF /* User.swift */,
+				C5B0588A1A3463A80030BDDF /* Bridge.h */,
 			);
 			path = Ders10;
 			sourceTree = "<group>";
@@ -113,6 +125,19 @@
 				C5B058731A3444C20030BDDF /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C5B058801A3462E10030BDDF /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				C5B058811A3462E10030BDDF /* SVIndefiniteAnimatedView.h */,
+				C5B058821A3462E10030BDDF /* SVIndefiniteAnimatedView.m */,
+				C5B058831A3462E10030BDDF /* SVProgressHUD-Prefix.pch */,
+				C5B058841A3462E10030BDDF /* SVProgressHUD.bundle */,
+				C5B058851A3462E10030BDDF /* SVProgressHUD.h */,
+				C5B058861A3462E10030BDDF /* SVProgressHUD.m */,
+			);
+			path = SVProgressHUD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +223,7 @@
 				C5B058641A3444C20030BDDF /* Main.storyboard in Resources */,
 				C5B058691A3444C20030BDDF /* LaunchScreen.xib in Resources */,
 				C5B058661A3444C20030BDDF /* Images.xcassets in Resources */,
+				C5B058881A3462E10030BDDF /* SVProgressHUD.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,7 +243,9 @@
 			files = (
 				C5B058611A3444C20030BDDF /* ViewController.swift in Sources */,
 				C5B0585F1A3444C20030BDDF /* AppDelegate.swift in Sources */,
+				C5B058891A3462E10030BDDF /* SVProgressHUD.m in Sources */,
 				C5B0587F1A345B730030BDDF /* User.swift in Sources */,
+				C5B058871A3462E10030BDDF /* SVIndefiniteAnimatedView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +371,7 @@
 				INFOPLIST_FILE = Ders10/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = Ders10/Bridge.h;
 			};
 			name = Debug;
 		};
@@ -353,6 +382,7 @@
 				INFOPLIST_FILE = Ders10/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = Ders10/Bridge.h;
 			};
 			name = Release;
 		};

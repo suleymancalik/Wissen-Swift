@@ -61,12 +61,18 @@ class ViewController: UIViewController {
             var urlString = "http://graph.facebook.com/" + txtUserId.text
             var url = NSURL(string: urlString)
             if let userUrl = url {
+                
+                SVProgressHUD.show()
+                
                 var request = NSURLRequest(URL: userUrl)
                 NSURLConnection.sendAsynchronousRequest(
                     request,
                     queue:NSOperationQueue.mainQueue(),
                     completionHandler:
                     { (response:NSURLResponse!, data:NSData!, error:NSError!) -> Void in
+
+                        SVProgressHUD.dismiss()
+                        
                         if error == nil {
                             self.veriyiYorumla(data)
                         }
