@@ -40,6 +40,16 @@ class ViewController: UIViewController {
             user.gender = userInfo["gender"]
             
             refreshUI(user)
+            
+            SVProgressHUD.dismiss()
+        }
+        else {
+            imgUserPhoto.image = nil
+            lblUsername.text = ""
+            lblFullName.text = ""
+            lblGender.text = ""
+            
+            SVProgressHUD.showErrorWithStatus("Kullanici Bulunamadi")
         }
     }
     
@@ -50,7 +60,33 @@ class ViewController: UIViewController {
         lblUsername.text = user.username
         lblGender.text = user.gender
         
+        downloadProfilePicture(user)
     }
+    
+    
+    func downloadProfilePicture(user:User) {
+        var urlString = "http://graph.facebook.com/" + txtUserId.text + "/picture"
+        var url = NSURL(string: urlString)
+        if let pictureUrl = url {
+            var request = NSURLRequest(URL: pictureUrl)
+            NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: { (response:NSURLResponse!, data:NSData!, error:NSError!) -> Void in
+                if error == nil {
+                    
+                    if let image = UIImage(data: data) {
+                        self.imgUserPhoto.image = image
+                    }
+                    else {
+                        SVProgressHUD.showErrorWithStatus("Resim Olusmadi")
+                    }
+                }
+                else {
+                    SVProgressHUD.showErrorWithStatus("Resim Indirilemedi")
+                }
+            })
+        }
+    }
+    
+    
 
 
     // MARK: - Action Methods
@@ -71,8 +107,6 @@ class ViewController: UIViewController {
                     completionHandler:
                     { (response:NSURLResponse!, data:NSData!, error:NSError!) -> Void in
 
-                        SVProgressHUD.dismiss()
-                        
                         if error == nil {
                             self.veriyiYorumla(data)
                         }
