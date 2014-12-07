@@ -32,7 +32,22 @@ class ViewController: UIViewController {
         
         
         var userInfo:Dictionary<String,String>! = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments, error: nil) as? Dictionary
-        println(userInfo)
+        
+        var user = User()
+        user.firstName = userInfo["first_name"]
+        user.lastName = userInfo["last_name"]
+        user.username = userInfo["username"]
+        user.gender = userInfo["gender"]
+        
+        refreshUI(user)
+    }
+    
+    
+    func refreshUI(user:User) {
+        
+        lblFullName.text = user.fullName()
+        lblUsername.text = user.username
+        lblGender.text = user.gender
         
     }
 
