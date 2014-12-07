@@ -10,16 +10,64 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    @IBOutlet weak var txtUserId: UITextField!
+    @IBOutlet weak var imgUserPhoto: UIImageView!
+    @IBOutlet weak var lblFullName: UILabel!
+    @IBOutlet weak var lblUsername: UILabel!
+    @IBOutlet weak var lblGender: UILabel!
+    @IBOutlet weak var btnFetchUser: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
+    
+    func veriyiYorumla(data:NSData) {
+        
+        var gelen = NSString(data: data, encoding: NSUTF8StringEncoding)
+        println(gelen!)
+        
+        
+        var userInfo:Dictionary<String,String>! = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments, error: nil) as? Dictionary
+        println(userInfo)
+        
+    }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+
+    // MARK: - Action Methods
+    
+    @IBAction func actFetchUser(sender: AnyObject) {
+        if !txtUserId.text.isEmpty {
+            
+            var urlString = "http://graph.facebook.com/" + txtUserId.text
+            var url = NSURL(string: urlString)
+            if let userUrl = url {
+                var request = NSURLRequest(URL: userUrl)
+                NSURLConnection.sendAsynchronousRequest(
+                    request,
+                    queue:NSOperationQueue.mainQueue(),
+                    completionHandler:
+                    { (response:NSURLResponse!, data:NSData!, error:NSError!) -> Void in
+                        if error == nil {
+                            self.veriyiYorumla(data)
+                        }
+                        else {
+                            println("HATA oldu: \(error)")
+                        }
+                    }
+                )
+            }
+        }
     }
 
 
 }
+
+
+
+
+
 
