@@ -21,7 +21,13 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        // "userId" anahtar kelimesinin karsisinda deger varsa aliyoruz
+        var userId:String? = NSUserDefaults.standardUserDefaults().objectForKey("userId") as? String
+        if userId != nil {
+            txtUserId.text = userId
+            actFetchUser(self)
+        }
     }
     
     
@@ -97,6 +103,11 @@ class ViewController: UIViewController {
             var urlString = "http://graph.facebook.com/" + txtUserId.text
             var url = NSURL(string: urlString)
             if let userUrl = url {
+                
+                // girilen id'yi "userId" anahtar kelimesi ile kaydediyoruz
+                var userDefaults = NSUserDefaults.standardUserDefaults()
+                userDefaults.setObject(txtUserId.text, forKey: "userId")
+                userDefaults.synchronize()
                 
                 SVProgressHUD.show()
                 
