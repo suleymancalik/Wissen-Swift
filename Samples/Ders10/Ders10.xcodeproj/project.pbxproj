@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C51BC30F1A3C301300109C85 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C51BC30E1A3C301300109C85 /* Realm.framework */; };
+		C51BC3111A3C30C800109C85 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C51BC3101A3C30C800109C85 /* libc++.dylib */; };
+		C51BC3131A3C311500109C85 /* RLMSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51BC3121A3C311500109C85 /* RLMSupport.swift */; };
+		C51BC3151A3C495100109C85 /* UserListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51BC3141A3C495100109C85 /* UserListVC.swift */; };
 		C5B0585F1A3444C20030BDDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B0585E1A3444C20030BDDF /* AppDelegate.swift */; };
 		C5B058611A3444C20030BDDF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B058601A3444C20030BDDF /* ViewController.swift */; };
 		C5B058641A3444C20030BDDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5B058621A3444C20030BDDF /* Main.storyboard */; };
@@ -30,6 +34,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C51BC30E1A3C301300109C85 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		C51BC3101A3C30C800109C85 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		C51BC3121A3C311500109C85 /* RLMSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLMSupport.swift; sourceTree = "<group>"; };
+		C51BC3141A3C495100109C85 /* UserListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserListVC.swift; sourceTree = "<group>"; };
 		C5B058591A3444C20030BDDF /* Ders10.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ders10.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5B0585D1A3444C20030BDDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5B0585E1A3444C20030BDDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +63,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C51BC3111A3C30C800109C85 /* libc++.dylib in Frameworks */,
+				C51BC30F1A3C301300109C85 /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +81,7 @@
 		C5B058501A3444C20030BDDF = {
 			isa = PBXGroup;
 			children = (
+				C51BC3101A3C30C800109C85 /* libc++.dylib */,
 				C5B0585B1A3444C20030BDDF /* Ders10 */,
 				C5B058711A3444C20030BDDF /* Ders10Tests */,
 				C5B0585A1A3444C20030BDDF /* Products */,
@@ -89,15 +100,18 @@
 		C5B0585B1A3444C20030BDDF /* Ders10 */ = {
 			isa = PBXGroup;
 			children = (
+				C51BC30E1A3C301300109C85 /* Realm.framework */,
 				C5B058801A3462E10030BDDF /* SVProgressHUD */,
 				C5B0585E1A3444C20030BDDF /* AppDelegate.swift */,
 				C5B058601A3444C20030BDDF /* ViewController.swift */,
+				C51BC3121A3C311500109C85 /* RLMSupport.swift */,
+				C5B0587E1A345B730030BDDF /* User.swift */,
 				C5B058621A3444C20030BDDF /* Main.storyboard */,
 				C5B058651A3444C20030BDDF /* Images.xcassets */,
 				C5B058671A3444C20030BDDF /* LaunchScreen.xib */,
 				C5B0585C1A3444C20030BDDF /* Supporting Files */,
-				C5B0587E1A345B730030BDDF /* User.swift */,
 				C5B0588A1A3463A80030BDDF /* Bridge.h */,
+				C51BC3141A3C495100109C85 /* UserListVC.swift */,
 			);
 			path = Ders10;
 			sourceTree = "<group>";
@@ -241,7 +255,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C51BC3151A3C495100109C85 /* UserListVC.swift in Sources */,
 				C5B058611A3444C20030BDDF /* ViewController.swift in Sources */,
+				C51BC3131A3C311500109C85 /* RLMSupport.swift in Sources */,
 				C5B0585F1A3444C20030BDDF /* AppDelegate.swift in Sources */,
 				C5B058891A3462E10030BDDF /* SVProgressHUD.m in Sources */,
 				C5B0587F1A345B730030BDDF /* User.swift in Sources */,
@@ -368,6 +384,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Ders10",
+				);
 				INFOPLIST_FILE = Ders10/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -379,6 +399,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Ders10",
+				);
 				INFOPLIST_FILE = Ders10/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -439,6 +463,7 @@
 				C5B0587A1A3444C20030BDDF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C5B0587B1A3444C20030BDDF /* Build configuration list for PBXNativeTarget "Ders10Tests" */ = {
 			isa = XCConfigurationList;
@@ -447,6 +472,7 @@
 				C5B0587D1A3444C20030BDDF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

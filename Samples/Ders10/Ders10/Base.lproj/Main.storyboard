@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hEm-7m-RP8">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Kisi Ekle-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Ders10" customModuleProvider="target" sceneMemberID="viewController">
@@ -92,6 +92,7 @@
                             <constraint firstAttribute="trailing" secondItem="O4l-JW-BJA" secondAttribute="trailing" constant="16" id="xcg-Wg-3Ts"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Kisi Ekle" image="addUser" id="Ipl-Vq-two"/>
                     <connections>
                         <outlet property="btnFetchUser" destination="O4l-JW-BJA" id="JA6-b9-STc"/>
                         <outlet property="imgUserPhoto" destination="qIT-r6-eo9" id="36R-Lk-gzF"/>
@@ -103,7 +104,65 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-56" y="269"/>
+            <point key="canvasLocation" x="388" y="41"/>
+        </scene>
+        <!--Kisiler-->
+        <scene sceneID="5dY-0B-o7N">
+            <objects>
+                <tableViewController id="3dk-b3-FKI" customClass="UserListVC" customModule="Ders10" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="1xO-6G-DIe">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserCell" textLabel="IX3-7R-dcp" style="IBUITableViewCellStyleDefault" id="ScH-vQ-ngK">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ScH-vQ-ngK" id="5rr-Ib-bnn">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IX3-7R-dcp">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="3dk-b3-FKI" id="3NS-12-2mR"/>
+                            <outlet property="delegate" destination="3dk-b3-FKI" id="0Cq-ZE-Qxc"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Kisiler" image="users" id="RHf-Pi-lhI"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MZb-PQ-R3n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="378" y="705"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Kk0-PH-COu">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="hEm-7m-RP8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="6uh-qY-0uq">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="viewControllers" id="CHd-ec-JI2"/>
+                        <segue destination="3dk-b3-FKI" kind="relationship" relationship="viewControllers" id="8Pn-Cu-KIB"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rw8-GM-pLo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-424" y="41"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="addUser" width="24" height="24"/>
+        <image name="users" width="24" height="24"/>
+    </resources>
 </document>

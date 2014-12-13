@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Realm
 
 class ViewController: UIViewController {
 
@@ -40,10 +41,26 @@ class ViewController: UIViewController {
         var userInfo:Dictionary<String,String>! = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments, error: nil) as? Dictionary
         if userInfo != nil {
             var user = User()
-            user.firstName = userInfo["first_name"]
-            user.lastName = userInfo["last_name"]
-            user.username = userInfo["username"]
-            user.gender = userInfo["gender"]
+            if let firstName = userInfo["first_name"] {
+                user.firstName = firstName
+            }
+            if let lastName = userInfo["last_name"] {
+                user.lastName = lastName
+            }
+            if let username = userInfo["username"] {
+                user.username = username
+            }
+            if let gender = userInfo["gender"] {
+                user.gender = gender
+            }
+            if let userId = userInfo["id"] {
+                user.userId = userId
+            }
+            
+            var realm = RLMRealm.defaultRealm()
+            realm.beginWriteTransaction()
+            realm.addOrUpdateObject(user)
+            realm.commitWriteTransaction()
             
             refreshUI(user)
             

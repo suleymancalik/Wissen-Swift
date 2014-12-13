@@ -6,18 +6,26 @@
 //  Copyright (c) 2014 Wissen. All rights reserved.
 //
 
-import UIKit
+import Realm
 
-class User: NSObject {
-   
-    var firstName:String!
-    var lastName:String!
-    var username:String!
-    var gender:String!
+class User: RLMObject {
 
+    dynamic var firstName:String = ""
+    dynamic var lastName:String = ""
+    dynamic var username:String = ""
+    dynamic var gender:String = ""
+    dynamic var userId:String = ""
+
+    
     func fullName() -> String {
         return firstName + " " + lastName
     }
+    
+    
+    override class func primaryKey() -> String! {
+        return "userId"
+    }
+    
 }
 
 
