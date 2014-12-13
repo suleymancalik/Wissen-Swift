@@ -107,9 +107,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="388" y="41"/>
+            <point key="canvasLocation" x="464" y="-219"/>
         </scene>
-        <!--Kisiler-->
+        <!--Kişiler-->
         <scene sceneID="5dY-0B-o7N">
             <objects>
                 <tableViewController id="3dk-b3-FKI" customClass="UserListVC" customModule="Ders10" customModuleProvider="target" sceneMemberID="viewController">
@@ -117,6 +117,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="IWL-Md-OFS">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="3dk-b3-FKI" id="cGk-BG-k3F"/>
+                            </connections>
+                        </searchBar>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserCell" textLabel="IX3-7R-dcp" style="IBUITableViewCellStyleDefault" id="ScH-vQ-ngK">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -138,11 +146,11 @@
                             <outlet property="delegate" destination="3dk-b3-FKI" id="0Cq-ZE-Qxc"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Kisiler" image="users" id="RHf-Pi-lhI"/>
+                    <navigationItem key="navigationItem" title="Kişiler" id="bho-MP-FkQ"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MZb-PQ-R3n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="378" y="705"/>
+            <point key="canvasLocation" x="1278" y="705"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Kk0-PH-COu">
@@ -156,12 +164,31 @@
                     </tabBar>
                     <connections>
                         <segue destination="vXZ-lx-hvc" kind="relationship" relationship="viewControllers" id="CHd-ec-JI2"/>
-                        <segue destination="3dk-b3-FKI" kind="relationship" relationship="viewControllers" id="8Pn-Cu-KIB"/>
+                        <segue destination="b1g-j5-Tek" kind="relationship" relationship="viewControllers" id="8Pn-Cu-KIB"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rw8-GM-pLo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-424" y="41"/>
+            <point key="canvasLocation" x="-472" y="357"/>
+        </scene>
+        <!--Kisiler-->
+        <scene sceneID="nmv-y3-vF2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="b1g-j5-Tek" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Kisiler" image="users" id="RHf-Pi-lhI"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mAL-U1-wvK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="3dk-b3-FKI" kind="relationship" relationship="rootViewController" id="xcs-Xo-RY2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="43k-P2-Cn2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="478" y="705"/>
         </scene>
     </scenes>
     <resources>

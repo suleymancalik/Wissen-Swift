@@ -16,6 +16,9 @@ class UserListVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        self.tableView.frame.height = newHeight
+//        tableView.frame.height = newHeight
+
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -32,6 +35,13 @@ class UserListVC: UITableViewController {
         users = User.allObjects()
     }
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        // Tabbar'in arkasinda kalan kismi kurtarmak icin
+        // tableView'in contentSize'ini artiriyoruz
+        tableView.contentSize.height += tabBarController!.tabBar.bounds.height
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
