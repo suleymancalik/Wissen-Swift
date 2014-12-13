@@ -66,17 +66,27 @@ class UserListVC: UITableViewController {
     }
     */
 
-    /*
+
+    // User silmek icin kullaniyoruz!
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
+            
+            // user'i veritabanindan sil
+            var user = users.objectAtIndex(UInt(indexPath.row)) as User
+            
+            var realm = RLMRealm.defaultRealm()
+            realm.beginWriteTransaction()
+            realm.deleteObject(user)
+            realm.commitWriteTransaction()
+            
             // Delete the row from the data source
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
 
     /*
     // Override to support rearranging the table view.

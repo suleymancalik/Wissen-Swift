@@ -12,7 +12,7 @@
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS" customClass="UIControl">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
@@ -91,6 +91,9 @@
                             <constraint firstAttribute="trailing" secondItem="xhK-wQ-zTl" secondAttribute="trailing" constant="20" id="e9T-2J-kTg"/>
                             <constraint firstAttribute="trailing" secondItem="O4l-JW-BJA" secondAttribute="trailing" constant="16" id="xcg-Wg-3Ts"/>
                         </constraints>
+                        <connections>
+                            <action selector="backgroundTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="auf-sB-MhN"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Kisi Ekle" image="addUser" id="Ipl-Vq-two"/>
                     <connections>

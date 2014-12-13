@@ -9,7 +9,7 @@
 import UIKit
 import Realm
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     
     @IBOutlet weak var txtUserId: UITextField!
@@ -22,6 +22,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        txtUserId.delegate = self
 
         // "userId" anahtar kelimesinin karsisinda deger varsa aliyoruz
         var userId:String? = NSUserDefaults.standardUserDefaults().objectForKey("userId") as? String
@@ -57,6 +60,8 @@ class ViewController: UIViewController {
                 user.userId = userId
             }
             
+            // Olusturdugumuz User'i 
+            // veritabanina ekliyoruz
             var realm = RLMRealm.defaultRealm()
             realm.beginWriteTransaction()
             realm.addOrUpdateObject(user)
@@ -110,9 +115,21 @@ class ViewController: UIViewController {
     }
     
     
+    // MARK: - Textfield Methods
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
 
 
     // MARK: - Action Methods
+    
+    @IBAction func backgroundTapped(sender: AnyObject) {
+        
+        txtUserId.resignFirstResponder()
+    }
     
     @IBAction func actFetchUser(sender: AnyObject) {
         if !txtUserId.text.isEmpty {

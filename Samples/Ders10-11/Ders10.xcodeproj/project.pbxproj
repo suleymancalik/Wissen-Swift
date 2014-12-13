@@ -104,6 +104,7 @@
 				C5B058801A3462E10030BDDF /* SVProgressHUD */,
 				C5B0585E1A3444C20030BDDF /* AppDelegate.swift */,
 				C5B058601A3444C20030BDDF /* ViewController.swift */,
+				C51BC3141A3C495100109C85 /* UserListVC.swift */,
 				C51BC3121A3C311500109C85 /* RLMSupport.swift */,
 				C5B0587E1A345B730030BDDF /* User.swift */,
 				C5B058621A3444C20030BDDF /* Main.storyboard */,
@@ -111,7 +112,6 @@
 				C5B058671A3444C20030BDDF /* LaunchScreen.xib */,
 				C5B0585C1A3444C20030BDDF /* Supporting Files */,
 				C5B0588A1A3463A80030BDDF /* Bridge.h */,
-				C51BC3141A3C495100109C85 /* UserListVC.swift */,
 			);
 			path = Ders10;
 			sourceTree = "<group>";

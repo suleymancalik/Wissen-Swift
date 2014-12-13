@@ -21,7 +21,7 @@ class User: RLMObject {
         return firstName + " " + lastName
     }
     
-    
+    // userId alanini primaryKey olarak belirliyoruz
     override class func primaryKey() -> String! {
         return "userId"
     }
