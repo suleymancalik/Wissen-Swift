@@ -9,7 +9,7 @@
 import UIKit
 import Realm
 
-class UserListVC: UITableViewController {
+class UserListVC: UITableViewController, UISearchBarDelegate {
 
     var users:RLMResults!
     
@@ -47,6 +47,30 @@ class UserListVC: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    // MARK: - Searchbar Methods
+    
+    // Searchbar'daki text degistikce yeni arama yapip
+    // tableview'i guncelliyoruz
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        users = User.objectsWhere("firstName CONTAINS[c] '\(searchText)' OR lastName CONTAINS[c] '\(searchText)' ")
+        tableView.reloadData()
+    }
+    
+    // Cancel'a basinca tableview'i eski haline getiriyoruz
+    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+        
+        // Butun User'lari cekip tableview'i yeniliyoruz
+        users = User.allObjects()
+        tableView.reloadData()
+
+        // Klavyeyi kapatiyoruz
+        searchBar.text = ""
+        searchBar.resignFirstResponder()
+    }
+    
 
     // MARK: - Table view data source
 
