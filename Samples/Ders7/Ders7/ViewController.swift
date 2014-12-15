@@ -57,6 +57,7 @@ class ViewController: UIViewController , UICollectionViewDataSource , UICollecti
         
         // collectionView'den cache'lenmis cell'i KoleksiyonCellID identifier'i ile cekiyoruz
         var cell = collectionView.dequeueReusableCellWithReuseIdentifier("KoleksiyonCellID", forIndexPath: indexPath) as KoleksiyonCell
+        cell.picture.alpha = 1
         
         switch indexPath.section {
         case 0:

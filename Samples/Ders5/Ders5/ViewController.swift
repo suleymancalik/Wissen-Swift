@@ -28,13 +28,13 @@ class ViewController: UIViewController , UITableViewDataSource , UITableViewDele
         
         
         
-        katilimcilar.append(Katilimci(name:"Suleyman", durum:true  ))
-        katilimcilar.append(Katilimci(name:"Ahmet"   , durum:true  ))
-        katilimcilar.append(Katilimci(name:"Mehmet"  , durum:false ))
-        katilimcilar.append(Katilimci(name:"Ali"     , durum:false ))
-        katilimcilar.append(Katilimci(name:"Veli"    , durum:true  ))
-        katilimcilar.append(Katilimci(name:"Murat"   , durum:true  ))
-        katilimcilar.append(Katilimci(name:"Hasan"   , durum:false ))
+        katilimcilar.append(Katilimci(isim:"Suleyman", durum:true  ))
+        katilimcilar.append(Katilimci(isim:"Ahmet"   , durum:true  ))
+        katilimcilar.append(Katilimci(isim:"Mehmet"  , durum:false ))
+        katilimcilar.append(Katilimci(isim:"Ali"     , durum:false ))
+        katilimcilar.append(Katilimci(isim:"Veli"    , durum:true  ))
+        katilimcilar.append(Katilimci(isim:"Murat"   , durum:true  ))
+        katilimcilar.append(Katilimci(isim:"Hasan"   , durum:false ))
     }
 
 
@@ -66,7 +66,7 @@ class ViewController: UIViewController , UITableViewDataSource , UITableViewDele
         var katilimci = katilimcilar[index]
         
         var cell = tableView.dequeueReusableCellWithIdentifier("CustomKatilimciCell") as KatilimciCell
-        cell.lblTitle.text = katilimci.name
+        cell.lblTitle.text = katilimci.isim
         cell.durumSwitch.on = katilimci.durum
         cell.delegate = self
         cell.currentIndex = index
@@ -92,7 +92,7 @@ class ViewController: UIViewController , UITableViewDataSource , UITableViewDele
             
             var katilimci = katilimcilar[indexPath.row]
             
-            var alert = UIAlertView(title: "Silinecek Kisi", message:katilimci.name, delegate:self, cancelButtonTitle: "Vazgec", otherButtonTitles: "Sil")
+            var alert = UIAlertView(title: "Silinecek Kisi", message:katilimci.isim, delegate:self, cancelButtonTitle: "Vazgec", otherButtonTitles: "Sil")
             alert.show()
             
             // secilen satirin index'ini sakliyoruz
@@ -123,7 +123,7 @@ class ViewController: UIViewController , UITableViewDataSource , UITableViewDele
     
     // MARK: - KatilimciDelegate Methods
     
-    
+    // KatilimciDelegate protocol'unun zorunlu kildigi fonksiyon
     func katilimciDurumuDegisti(index: Int, yeniDurum: Bool) {
         println("katilimciDurumuDegisti")
         //

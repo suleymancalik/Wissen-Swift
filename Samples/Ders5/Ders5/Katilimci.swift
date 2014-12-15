@@ -9,6 +9,6 @@
 import Foundation
 
 struct Katilimci {
-    var name:String
+    var isim:String
     var durum:Bool
 }
