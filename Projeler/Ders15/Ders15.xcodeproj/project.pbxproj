@@ -380,7 +380,7 @@
 				INFOPLIST_FILE = Ders15/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "7203e942-32c4-405f-94f4-ae885c5e106a";
+				PROVISIONING_PROFILE = "286ea936-bc53-4b82-a3d7-a0ccc8cf677c";
 			};
 			name = Debug;
 		};
@@ -396,7 +396,7 @@
 				INFOPLIST_FILE = Ders15/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "7203e942-32c4-405f-94f4-ae885c5e106a";
+				PROVISIONING_PROFILE = "286ea936-bc53-4b82-a3d7-a0ccc8cf677c";
 			};
 			name = Release;
 		};
