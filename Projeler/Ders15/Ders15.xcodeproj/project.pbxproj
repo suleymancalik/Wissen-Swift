@@ -340,7 +340,7 @@
 				INFOPLIST_FILE = Ders15/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "36d39b31-f951-4183-9bca-d4f6dbf1929f";
+				PROVISIONING_PROFILE = "7203e942-32c4-405f-94f4-ae885c5e106a";
 			};
 			name = Debug;
 		};
@@ -352,7 +352,7 @@
 				INFOPLIST_FILE = Ders15/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "36d39b31-f951-4183-9bca-d4f6dbf1929f";
+				PROVISIONING_PROFILE = "7203e942-32c4-405f-94f4-ae885c5e106a";
 			};
 			name = Release;
 		};
@@ -409,6 +409,7 @@
 				C51AAF4F1A4EB6EE005FF422 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C51AAF501A4EB6EE005FF422 /* Build configuration list for PBXNativeTarget "Ders15Tests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +418,7 @@
 				C51AAF521A4EB6EE005FF422 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
