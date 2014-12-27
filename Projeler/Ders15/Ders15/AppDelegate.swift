@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,6 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+        Parse.setApplicationId("UCVLMahElBOXVkICZsbdJ5kM576DOIk6CdD5cha3",
+            clientKey: "qKamq0NYgb10n3KHERdlK1XrvZi90WSLeGZgj7ad")
 
         if application.isRegisteredForRemoteNotifications() {
             println("Push Notification hazir")
@@ -36,7 +40,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     
     func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
-        println("token: \(deviceToken)")
+//        println("token: \(deviceToken)")
+        
+        PFInstallation.currentInstallation().setDeviceTokenFromData(deviceToken)
+        PFInstallation.currentInstallation().saveInBackgroundWithBlock { (completed, error) -> Void in
+            if completed {
+                println("TOKEN gonderildi")
+            }
+            else {
+                println("TOKEN gonderilemedi! :\(error)")
+            }
+        }
+        
+        
     }
     
 

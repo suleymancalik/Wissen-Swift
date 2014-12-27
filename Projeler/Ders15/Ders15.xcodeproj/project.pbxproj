@@ -13,6 +13,12 @@
 		C51AAF3B1A4EB6EE005FF422 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C51AAF3A1A4EB6EE005FF422 /* Images.xcassets */; };
 		C51AAF3E1A4EB6EE005FF422 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C51AAF3C1A4EB6EE005FF422 /* LaunchScreen.xib */; };
 		C51AAF4A1A4EB6EE005FF422 /* Ders15Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51AAF491A4EB6EE005FF422 /* Ders15Tests.swift */; };
+		C51AAF561A4EC206005FF422 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C51AAF541A4EC206005FF422 /* Bolts.framework */; };
+		C51AAF571A4EC206005FF422 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C51AAF551A4EC206005FF422 /* Parse.framework */; };
+		C51AAF591A4EC275005FF422 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C51AAF581A4EC275005FF422 /* MobileCoreServices.framework */; };
+		C51AAF5F1A4EC2A5005FF422 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C51AAF5E1A4EC2A5005FF422 /* AudioToolbox.framework */; };
+		C51AAF611A4EC2B2005FF422 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C51AAF601A4EC2B2005FF422 /* SystemConfiguration.framework */; };
+		C51AAF631A4EC2BC005FF422 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C51AAF621A4EC2BC005FF422 /* libsqlite3.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +42,14 @@
 		C51AAF431A4EB6EE005FF422 /* Ders15Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Ders15Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C51AAF481A4EB6EE005FF422 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C51AAF491A4EB6EE005FF422 /* Ders15Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ders15Tests.swift; sourceTree = "<group>"; };
+		C51AAF541A4EC206005FF422 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		C51AAF551A4EC206005FF422 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		C51AAF581A4EC275005FF422 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		C51AAF5A1A4EC27C005FF422 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		C51AAF5C1A4EC287005FF422 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		C51AAF5E1A4EC2A5005FF422 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		C51AAF601A4EC2B2005FF422 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		C51AAF621A4EC2BC005FF422 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +57,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C51AAF631A4EC2BC005FF422 /* libsqlite3.dylib in Frameworks */,
+				C51AAF611A4EC2B2005FF422 /* SystemConfiguration.framework in Frameworks */,
+				C51AAF5F1A4EC2A5005FF422 /* AudioToolbox.framework in Frameworks */,
+				C51AAF591A4EC275005FF422 /* MobileCoreServices.framework in Frameworks */,
+				C51AAF571A4EC206005FF422 /* Parse.framework in Frameworks */,
+				C51AAF561A4EC206005FF422 /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +97,7 @@
 		C51AAF301A4EB6EE005FF422 /* Ders15 */ = {
 			isa = PBXGroup;
 			children = (
+				C51AAF531A4EC206005FF422 /* Frameworks */,
 				C51AAF331A4EB6EE005FF422 /* AppDelegate.swift */,
 				C51AAF351A4EB6EE005FF422 /* ViewController.swift */,
 				C51AAF371A4EB6EE005FF422 /* Main.storyboard */,
@@ -111,6 +132,21 @@
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
+		};
+		C51AAF531A4EC206005FF422 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C51AAF621A4EC2BC005FF422 /* libsqlite3.dylib */,
+				C51AAF601A4EC2B2005FF422 /* SystemConfiguration.framework */,
+				C51AAF5E1A4EC2A5005FF422 /* AudioToolbox.framework */,
+				C51AAF5C1A4EC287005FF422 /* Security.framework */,
+				C51AAF5A1A4EC27C005FF422 /* CFNetwork.framework */,
+				C51AAF581A4EC275005FF422 /* MobileCoreServices.framework */,
+				C51AAF541A4EC206005FF422 /* Bolts.framework */,
+				C51AAF551A4EC206005FF422 /* Parse.framework */,
+			);
+			path = Frameworks;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -337,6 +373,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = Ders15/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -349,6 +389,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = Ders15/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
