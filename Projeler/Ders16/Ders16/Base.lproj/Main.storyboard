@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Ders16" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GwS-5O-HkZ">
+                                <rect key="frame" x="250" y="20" width="100" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="8DP-cD-sRt"/>
+                                    <constraint firstAttribute="width" constant="100" id="TX0-HM-jOL"/>
+                                </constraints>
+                                <state key="normal" title="Alarm Ekle">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Baa-2p-s1t" kind="show" id="cWp-Em-x3b"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="fKo-tl-ge5">
+                                <rect key="frame" x="16" y="80" width="568" height="520"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="GwS-5O-HkZ" secondAttribute="centerX" id="37N-y7-kje"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="fKo-tl-ge5" secondAttribute="bottom" id="3nZ-v6-rgF"/>
+                            <constraint firstItem="GwS-5O-HkZ" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="NN7-XW-HBV"/>
+                            <constraint firstItem="fKo-tl-ge5" firstAttribute="top" secondItem="GwS-5O-HkZ" secondAttribute="bottom" constant="20" id="g7K-Ng-gPV"/>
+                            <constraint firstItem="fKo-tl-ge5" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="r5y-fy-KGn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fKo-tl-ge5" secondAttribute="trailing" id="wPE-Js-7sv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="fKo-tl-ge5" id="4SA-bU-AUY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-62" y="166"/>
+        </scene>
+        <!--New AlarmVC-->
+        <scene sceneID="h5a-EX-zHD">
+            <objects>
+                <viewController id="Baa-2p-s1t" customClass="NewAlarmVC" customModule="Ders16" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yyd-Zf-5uV"/>
+                        <viewControllerLayoutGuide type="bottom" id="AyG-Dg-ARC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xjv-Mb-tO3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tfJ-8L-k1g">
+                                <rect key="frame" x="16" y="20" width="100" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="EQG-vz-ULT"/>
+                                    <constraint firstAttribute="width" constant="100" id="kpb-ef-1dO"/>
+                                </constraints>
+                                <state key="normal" title="Vazgec">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelTapped:" destination="Baa-2p-s1t" eventType="touchUpInside" id="jps-gG-nh3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Bd-Yt-KhL">
+                                <rect key="frame" x="484" y="20" width="100" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Ygu-lX-qLs"/>
+                                    <constraint firstAttribute="height" constant="40" id="iey-cI-6ad"/>
+                                </constraints>
+                                <state key="normal" title="Ekle">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addTapped:" destination="Baa-2p-s1t" eventType="touchUpInside" id="oAc-a5-nID"/>
+                                </connections>
+                            </button>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Qlh-qH-swl">
+                                <rect key="frame" x="0.0" y="68" width="600" height="162"/>
+                                <date key="date" timeIntervalSinceReferenceDate="441450312.70162702">
+                                    <!--2014-12-28 09:05:12 +0000-->
+                                </date>
+                            </datePicker>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j7v-rq-0JB">
+                                <rect key="frame" x="16" y="238" width="568" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Y5a-7i-qdN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tfJ-8L-k1g" firstAttribute="top" secondItem="yyd-Zf-5uV" secondAttribute="bottom" id="0fg-z9-Oao"/>
+                            <constraint firstItem="tfJ-8L-k1g" firstAttribute="leading" secondItem="xjv-Mb-tO3" secondAttribute="leadingMargin" id="8qd-mT-wo8"/>
+                            <constraint firstItem="j7v-rq-0JB" firstAttribute="top" secondItem="Qlh-qH-swl" secondAttribute="bottom" constant="8" id="BoR-vX-HV5"/>
+                            <constraint firstItem="j7v-rq-0JB" firstAttribute="trailing" secondItem="xjv-Mb-tO3" secondAttribute="trailingMargin" id="Nlp-tK-cpy"/>
+                            <constraint firstAttribute="trailing" secondItem="Qlh-qH-swl" secondAttribute="trailing" id="PP3-vg-Nnk"/>
+                            <constraint firstItem="Qlh-qH-swl" firstAttribute="top" secondItem="8Bd-Yt-KhL" secondAttribute="bottom" constant="8" id="Yal-yq-R4y"/>
+                            <constraint firstItem="Qlh-qH-swl" firstAttribute="leading" secondItem="xjv-Mb-tO3" secondAttribute="leading" id="YzL-9h-KfO"/>
+                            <constraint firstItem="8Bd-Yt-KhL" firstAttribute="top" secondItem="yyd-Zf-5uV" secondAttribute="bottom" id="xXP-wr-Bwb"/>
+                            <constraint firstItem="8Bd-Yt-KhL" firstAttribute="trailing" secondItem="xjv-Mb-tO3" secondAttribute="trailingMargin" id="yDq-It-sEk"/>
+                            <constraint firstItem="j7v-rq-0JB" firstAttribute="leading" secondItem="xjv-Mb-tO3" secondAttribute="leadingMargin" id="yRK-zC-c2x"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="datePicker" destination="Qlh-qH-swl" id="Vh4-IP-iV5"/>
+                        <outlet property="txtTitle" destination="j7v-rq-0JB" id="IMq-zG-e4U"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nFP-xk-G4p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="614" y="159"/>
+        </scene>
+    </scenes>
+</document>
