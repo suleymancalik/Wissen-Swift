@@ -21,7 +21,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             clientKey: "qKamq0NYgb10n3KHERdlK1XrvZi90WSLeGZgj7ad")
 
         if application.isRegisteredForRemoteNotifications() {
-            println("Push Notification hazir")
+            
+            // Uygulama push notification ile açılmış ise,
+            // gelen push bilgileri launchOptions içindedir
+            if let userInfo = launchOptions {
+                if let pushData: AnyObject = userInfo[UIApplicationLaunchOptionsRemoteNotificationKey] {
+                    handlePushNoti(pushData as [NSObject: AnyObject])
+                }
+            }
+            else {
+                var alertView = UIAlertView(title: "Push Gelmedi", message:"" , delegate: nil, cancelButtonTitle: "Tamam")
+                alertView.show()
+            }
+            
         }
         else {
             var settings = UIUserNotificationSettings(forTypes:
@@ -37,6 +49,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
+    
+    func handlePushNoti(userInfo: [NSObject : AnyObject]) {
+        // Push notification verisi
+        // { "aps" : { "alert" : "Message received from Bob" } }
+        // seklinde oldugu icin alert'e erismek icin dictionary'yi kontrol ediyoruz
+
+        if let pushData:AnyObject =  userInfo["aps"] {
+            if let alert:AnyObject = pushData["alert"] {
+                var alertView = UIAlertView(title: "Push Geldi", message: alert as? String, delegate: nil, cancelButtonTitle: "Tamam")
+                alertView.show()
+                
+                UIApplication.sharedApplication().applicationIconBadgeNumber = 0
+                
+            }
+            else {
+                var alertView = UIAlertView(title: "Alert YOK", message:"" , delegate: nil, cancelButtonTitle: "Tamam")
+                alertView.show()
+            }
+        }
+        else {
+            var alertView = UIAlertView(title: "APS YOK", message:"\(userInfo)" , delegate: nil, cancelButtonTitle: "Tamam")
+            alertView.show()
+        }
+    }
+    
+    // Uygulama açıkken push noti gelirse burası çağrılır
+    func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
+        
+        handlePushNoti(userInfo)
+    }
+    
 
     
     func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
@@ -55,6 +98,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
     }
     
+    
+    func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {
+        println(error)
+    }
+    
 
 }
+
+
+
+
 
