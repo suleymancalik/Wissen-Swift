@@ -19,11 +19,6 @@ class NewAlarmVC: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     
     // MARK: - Action Methods
@@ -35,7 +30,12 @@ class NewAlarmVC: UIViewController {
     
     @IBAction func addTapped(sender: UIButton) {
         
+        var newAlarm = UILocalNotification()
+        newAlarm.fireDate = datePicker.date
+        newAlarm.alertBody = txtTitle.text
+        UIApplication.sharedApplication().scheduleLocalNotification(newAlarm)
         
+        dismissViewControllerAnimated(true, completion: nil)
     }
 
 
