@@ -46,10 +46,18 @@ class ViewController: UIViewController, UITableViewDataSource {
     
     
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        
+        if editingStyle == UITableViewCellEditingStyle.Delete {
+            var alarm = alarms[indexPath.row]
+            UIApplication.sharedApplication().cancelLocalNotification(alarm)
+            alarms.removeAtIndex(indexPath.row)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Fade)
+        }
     }
-
 }
+
+
+
+
 
 
 
