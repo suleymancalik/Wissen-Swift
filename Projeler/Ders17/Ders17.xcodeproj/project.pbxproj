@@ -14,6 +14,7 @@
 		C5E0ADED1A57E1E600B511E1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5E0ADEC1A57E1E600B511E1 /* Images.xcassets */; };
 		C5E0ADF01A57E1E600B511E1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5E0ADEE1A57E1E600B511E1 /* LaunchScreen.xib */; };
 		C5E0ADFC1A57E1E600B511E1 /* Ders17Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E0ADFB1A57E1E600B511E1 /* Ders17Tests.swift */; };
+		C5E0AE071A57FA3A00B511E1 /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E0AE061A57FA3A00B511E1 /* MenuVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		C5E0ADFA1A57E1E600B511E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5E0ADFB1A57E1E600B511E1 /* Ders17Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ders17Tests.swift; sourceTree = "<group>"; };
 		C5E0AE051A57E96400B511E1 /* Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridge.h; sourceTree = "<group>"; };
+		C5E0AE061A57FA3A00B511E1 /* MenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
 		F2D949EB3BF28C845CE1C9BA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,6 +98,7 @@
 				C5E0AE051A57E96400B511E1 /* Bridge.h */,
 				C5E0ADE51A57E1E600B511E1 /* AppDelegate.swift */,
 				C5E0ADE71A57E1E600B511E1 /* ViewController.swift */,
+				C5E0AE061A57FA3A00B511E1 /* MenuVC.swift */,
 				C5E0ADE91A57E1E600B511E1 /* Main.storyboard */,
 				C5E0ADEC1A57E1E600B511E1 /* Images.xcassets */,
 				C5E0ADEE1A57E1E600B511E1 /* LaunchScreen.xib */,
@@ -275,6 +278,7 @@
 			files = (
 				C5E0ADE81A57E1E600B511E1 /* ViewController.swift in Sources */,
 				C5E0ADE61A57E1E600B511E1 /* AppDelegate.swift in Sources */,
+				C5E0AE071A57FA3A00B511E1 /* MenuVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

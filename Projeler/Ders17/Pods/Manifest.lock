@@ -20,14 +20,14 @@ PODS:
   - AFNetworking/UIKit (2.5.0):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
-  - iOS-Slide-Menu (1.4.4)
+  - AMSlideMenu (1.5.3)
 
 DEPENDENCIES:
   - AFNetworking
-  - iOS-Slide-Menu
+  - AMSlideMenu
 
 SPEC CHECKSUMS:
   AFNetworking: 0f54cb5d16ce38c1b76948faffb8d5fb705021c7
-  iOS-Slide-Menu: 7891c4e4180aac2b23fb2e5459ff61b8691a8496
+  AMSlideMenu: ab0c9313c74eac61e360d2a714d2d8202f6de916
 
 COCOAPODS: 0.35.0
