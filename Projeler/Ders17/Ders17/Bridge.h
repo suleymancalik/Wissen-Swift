@@ -7,4 +7,4 @@
 //
 
 #import "AFNetworking.h"
-#import "UIViewController+AMSlideMenu.h"
+#import "UIViewController+ECSlidingViewController.h"

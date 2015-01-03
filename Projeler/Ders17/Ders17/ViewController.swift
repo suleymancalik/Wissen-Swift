@@ -8,16 +8,24 @@
 
 import UIKit
 
-class ViewController: AMSlideMenuMainViewController {
+class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+
+        slidingViewController().topViewAnchoredGesture = ECSlidingViewControllerAnchoredGesture.Tapping | ECSlidingViewControllerAnchoredGesture.Panning;
+        view.addGestureRecognizer(self.slidingViewController().panGesture)
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+        //        slidingViewController().anchorTopViewToRightAnimated(true)
+        //        self.slidingViewController().anchorLeftPeekAmount = 60
+        //        self.slidingViewController().anchorRightPeekAmount = 60
     }
 
 

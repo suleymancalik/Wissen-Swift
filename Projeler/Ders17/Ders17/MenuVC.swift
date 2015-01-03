@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MenuVC: AMSlideMenuMainViewController {
+class MenuVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
