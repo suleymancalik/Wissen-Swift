@@ -8,28 +8,59 @@
 
 import UIKit
 
-class MenuVC: UIViewController {
+class MenuVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    
+    @IBOutlet weak var lblSelectedCity: UILabel!    
+    @IBOutlet weak var tblCities: UITableView!
+    
+    var cities:Array<String>!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        cities = [
+            "Adana",
+            "Adıyaman",
+            "Afyonkarahisar",
+            "Ağrı",
+            "Amasya",
+            "Ankara",
+            "İstanbul",
+            "İzmir"]
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    //MARK: - TableView Methods
+    
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return cities.count
+    }
+
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        var cell = tableView.dequeueReusableCellWithIdentifier("CityCell") as UITableViewCell
+        
+        cell.textLabel?.text = cities[indexPath.row]
+        
+        return cell
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        var cityName = cities[indexPath.row]
+        lblSelectedCity.text = cityName
+        
+        slidingViewController().resetTopViewAnimated(true)
     }
-    */
-
+    
+    
 }
+
+
+
+
+
+

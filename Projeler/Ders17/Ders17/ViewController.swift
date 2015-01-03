@@ -12,11 +12,12 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        var leftWidth = view.bounds.width / 1.5
+        self.slidingViewController().anchorRightPeekAmount = leftWidth
+        
         slidingViewController().topViewAnchoredGesture = ECSlidingViewControllerAnchoredGesture.Tapping | ECSlidingViewControllerAnchoredGesture.Panning;
         view.addGestureRecognizer(self.slidingViewController().panGesture)
-        
-        
     }
 
     override func didReceiveMemoryWarning() {
