@@ -21,13 +21,16 @@ PODS:
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
   - ECSlidingViewController (2.0.3)
+  - SVProgressHUD (1.1.2)
 
 DEPENDENCIES:
   - AFNetworking
   - ECSlidingViewController
+  - SVProgressHUD
 
 SPEC CHECKSUMS:
   AFNetworking: 0f54cb5d16ce38c1b76948faffb8d5fb705021c7
   ECSlidingViewController: e79fe856bfb1a99a39c995377a1943e50f7647eb
+  SVProgressHUD: da7a49e789af645d9279ffbca62318945a832438
 
 COCOAPODS: 0.35.0

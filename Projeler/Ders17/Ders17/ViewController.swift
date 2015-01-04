@@ -36,11 +36,18 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     }
 
     
+    override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
+        var leftWidth = size.width / 1.5
+        self.slidingViewController().anchorRightPeekAmount = leftWidth
+    }
+    
     
     func refreshWeather() {
         
+        SVProgressHUD.show()
         weatherService.getWeather("buraya city gelecek", language: "buraya dil gelecek", unit: WeatherUnit.Celsius) { (weather) -> () in
-            
+            SVProgressHUD.dismiss()
+
             // weather geldi
             // ekrani yenile
         }
