@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum WeatherUnit {
+enum WeatherUnit:Int {
     case Celsius
     case Fahrenheit
 }

@@ -116,8 +116,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="cityPicker" destination="mhO-7M-MhY" id="6El-oh-lSZ"/>
                         <outlet property="imgWeather" destination="fJF-zx-5LM" id="ilo-2a-NaI"/>
+                        <outlet property="languagePicker" destination="mhO-7M-MhY" id="OKw-cA-RDr"/>
                         <outlet property="lblCityName" destination="r8h-oA-hYK" id="4fk-8i-ex9"/>
                         <outlet property="lblTemprature" destination="5sh-4v-n9b" id="4fz-A0-mPH"/>
                         <outlet property="unitSegment" destination="jfd-tb-r7a" id="dog-es-6Ge"/>

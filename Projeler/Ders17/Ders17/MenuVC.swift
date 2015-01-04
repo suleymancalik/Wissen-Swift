@@ -30,6 +30,17 @@ class MenuVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             "İzmir"]
     }
 
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if let city:String = NSUserDefaults.standardUserDefaults().valueForKey(keyCity) as? String {
+            lblSelectedCity.text = city
+        }
+        else {
+            lblSelectedCity.text = ""
+        }
+    }
+    
     
     //MARK: - TableView Methods
     
@@ -52,6 +63,9 @@ class MenuVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         var cityName = cities[indexPath.row]
         lblSelectedCity.text = cityName
+        
+        NSUserDefaults.standardUserDefaults().setValue(cityName, forKey: keyCity)
+        NSUserDefaults.standardUserDefaults().synchronize()
         
         slidingViewController().resetTopViewAnimated(true)
     }
