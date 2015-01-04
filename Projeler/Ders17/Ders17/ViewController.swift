@@ -8,10 +8,24 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
+    
+    @IBOutlet weak var lblCityName: UILabel!
+    @IBOutlet weak var lblTemprature: UILabel!
+    @IBOutlet weak var imgWeather: UIImageView!
+    @IBOutlet weak var unitSegment: UISegmentedControl!
+    @IBOutlet weak var cityPicker: UIPickerView!
+    
+    var languages:[(String,String)]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        languages = [
+            ("Türkçe","tr"),
+            ("English" , "en"),
+            ("Russian" , "ru")]
         
         var leftWidth = view.bounds.width / 1.5
         self.slidingViewController().anchorRightPeekAmount = leftWidth
@@ -28,6 +42,20 @@ class ViewController: UIViewController {
         //        self.slidingViewController().anchorRightPeekAmount = 60
     }
 
+    
+    //MARK: Actions
+    
+    @IBAction func segmentValueChanged(sender: UISegmentedControl) {
+    }
+    
+    
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
+    }
 
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return languages.count
+    }
+    
 }
 

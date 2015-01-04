@@ -69,6 +69,10 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="162" id="3h5-Ob-9Z7"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="PAW-Kj-SLa" id="hnZ-hb-ghd"/>
+                                    <outlet property="delegate" destination="PAW-Kj-SLa" id="2Dv-XS-eT7"/>
+                                </connections>
                             </pickerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z0J-EE-dNU">
                                 <rect key="frame" x="0.0" y="185" width="600" height="1"/>
@@ -87,6 +91,9 @@
                                     <segment title="°C"/>
                                     <segment title="°F"/>
                                 </segments>
+                                <connections>
+                                    <action selector="segmentValueChanged:" destination="PAW-Kj-SLa" eventType="valueChanged" id="AKZ-OY-5t5"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="0.91460217927631571" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -108,10 +115,17 @@
                             <constraint firstItem="5sh-4v-n9b" firstAttribute="centerY" secondItem="fJF-zx-5LM" secondAttribute="centerY" id="qfJ-WX-qY3"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cityPicker" destination="mhO-7M-MhY" id="6El-oh-lSZ"/>
+                        <outlet property="imgWeather" destination="fJF-zx-5LM" id="ilo-2a-NaI"/>
+                        <outlet property="lblCityName" destination="r8h-oA-hYK" id="4fk-8i-ex9"/>
+                        <outlet property="lblTemprature" destination="5sh-4v-n9b" id="4fz-A0-mPH"/>
+                        <outlet property="unitSegment" destination="jfd-tb-r7a" id="dog-es-6Ge"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZbE-sp-7s2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="828" y="-267"/>
+            <point key="canvasLocation" x="872" y="-375"/>
         </scene>
         <!--MenuVC-->
         <scene sceneID="c4A-OP-8cx">
