@@ -68,6 +68,9 @@ class MenuVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         NSUserDefaults.standardUserDefaults().synchronize()
         
         slidingViewController().resetTopViewAnimated(true)
+        
+        var mainVC = slidingViewController().topViewController as ViewController
+        mainVC.refreshWeather()
     }
     
     

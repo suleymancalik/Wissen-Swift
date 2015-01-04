@@ -9,3 +9,4 @@
 #import "AFNetworking.h"
 #import "UIViewController+ECSlidingViewController.h"
 #import "SVProgressHUD.h"
+#import "UIImageView+WebCache.h"

@@ -17,9 +17,54 @@ enum WeatherUnit:Int {
 
 class WeatherService: NSObject {
 
-    func getWeather(city:String,language:String,unit:WeatherUnit, result:(weather:Weather) -> () ) {
+    func getWeather(city:String,language:String,unit:WeatherUnit, result:(weather:Weather!) -> () ) {
         
-        // TODO
+        
+        //Istanbul&units=metric&lang=tr
+        
+        var unitStr = unit == .Celsius ? "metric" : ""
+        
+        var urlString =
+        "http://api.openweathermap.org/data/2.5/weather?q="
+            + city
+            + "&units=" + unitStr
+            + "&lang=" + language
+        
+        
+        urlString = urlString.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
+        
+        var manager = AFHTTPRequestOperationManager()
+        manager.GET(urlString, parameters:nil, success: { (operation, object) -> Void in
+            // Çağrı başarılı olursa burası çalışacak
+            
+            var weather = Weather()
+            
+            if let main:AnyObject = object["main"] {
+                if let temp:Float = main["temp"] as? Float {
+                    weather.temprature = temp
+                }
+            }
+            
+            if let weatherArray = object["weather"] as? Array<AnyObject> {
+                if let weatherObject:AnyObject = weatherArray.first {
+                    
+                    if let description = weatherObject["description"] as? String {
+                        weather.desc = description
+                    }
+                    if let icon = weatherObject["icon"] as? String {
+                        weather.icon = icon
+                    }
+                }
+            }
+            
+            weather.unit = unit
+            
+            result(weather:weather)
+            
+        }) { (operation, error) -> Void in
+            //Çağrı başarısız olursa burası çalışacak
+            result(weather:nil)
+        }
     }
 }
 

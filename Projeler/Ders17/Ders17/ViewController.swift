@@ -18,14 +18,14 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     @IBOutlet weak var lblCityName: UILabel!
     @IBOutlet weak var lblTemprature: UILabel!
+    @IBOutlet weak var lblDescription: UILabel!
     @IBOutlet weak var imgWeather: UIImageView!
     @IBOutlet weak var unitSegment: UISegmentedControl!
     @IBOutlet weak var languagePicker: UIPickerView!
     
     var languages:[(String,String)]!
     var weatherService = WeatherService()
-    
-    
+    var currentWeather:Weather!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,6 +71,18 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         var userDefaults = NSUserDefaults.standardUserDefaults()
         if let city:String = userDefaults.valueForKey(keyCity) as? String {
             lblCityName.text = city
+            
+            if let weather = currentWeather {
+                var unitStr = weather.unit == WeatherUnit.Celsius ? "C" : "F"
+                lblTemprature.text =
+                    String(format:"%.1f °%@", weather.temprature , unitStr)
+                
+                lblDescription.text = weather.desc
+                
+                var url =
+                NSURL(string:"http://openweathermap.org/img/w/\(weather.icon).png")
+                imgWeather.sd_setImageWithURL(url)
+            }
         }
         else {
             lblCityName.text = "Lütfen Şehir Şeçiniz"
@@ -103,10 +115,8 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
             SVProgressHUD.showWithMaskType(SVProgressHUDMaskType.Black)
             weatherService.getWeather(cityName, language:languageCode, unit:unit) { (weather) -> () in
                 SVProgressHUD.dismiss()
-                
+                self.currentWeather = weather
                 self.refreshUI()
-                // weather geldi
-                // ekrani yenile
             }
         }
 
