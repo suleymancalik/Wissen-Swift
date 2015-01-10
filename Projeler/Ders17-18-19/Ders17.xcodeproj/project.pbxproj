@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		3804781CB170B90ABEAAEF77 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0779690429B4876391CBB3AA /* libPods.a */; };
+		C518129F1A61270600C12D9C /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C518129E1A61270600C12D9C /* NotificationCenter.framework */; };
+		C51812A41A61270600C12D9C /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51812A31A61270600C12D9C /* TodayViewController.swift */; };
+		C51812A61A61270600C12D9C /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C51812A51A61270600C12D9C /* MainInterface.storyboard */; };
+		C51812A91A61270600C12D9C /* HavaDurumu.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C518129D1A61270600C12D9C /* HavaDurumu.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		C5E0ADE61A57E1E600B511E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E0ADE51A57E1E600B511E1 /* AppDelegate.swift */; };
 		C5E0ADE81A57E1E600B511E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E0ADE71A57E1E600B511E1 /* ViewController.swift */; };
 		C5E0ADEB1A57E1E600B511E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5E0ADE91A57E1E600B511E1 /* Main.storyboard */; };
@@ -20,6 +24,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		C51812A71A61270600C12D9C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C5E0ADD81A57E1E600B511E1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C518129C1A61270600C12D9C;
+			remoteInfo = HavaDurumu;
+		};
 		C5E0ADF61A57E1E600B511E1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C5E0ADD81A57E1E600B511E1 /* Project object */;
@@ -29,9 +40,28 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		C51812AD1A61270600C12D9C /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				C51812A91A61270600C12D9C /* HavaDurumu.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		06A4C869F62C170E4B9FE343 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		0779690429B4876391CBB3AA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C518129D1A61270600C12D9C /* HavaDurumu.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = HavaDurumu.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		C518129E1A61270600C12D9C /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		C51812A21A61270600C12D9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C51812A31A61270600C12D9C /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		C51812A51A61270600C12D9C /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 		C5E0ADE01A57E1E600B511E1 /* Ders17.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ders17.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5E0ADE41A57E1E600B511E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5E0ADE51A57E1E600B511E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -50,6 +80,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C518129A1A61270600C12D9C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C518129F1A61270600C12D9C /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C5E0ADDD1A57E1E600B511E1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -72,8 +110,27 @@
 			isa = PBXGroup;
 			children = (
 				0779690429B4876391CBB3AA /* libPods.a */,
+				C518129E1A61270600C12D9C /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C51812A01A61270600C12D9C /* HavaDurumu */ = {
+			isa = PBXGroup;
+			children = (
+				C51812A31A61270600C12D9C /* TodayViewController.swift */,
+				C51812A51A61270600C12D9C /* MainInterface.storyboard */,
+				C51812A11A61270600C12D9C /* Supporting Files */,
+			);
+			path = HavaDurumu;
+			sourceTree = "<group>";
+		};
+		C51812A11A61270600C12D9C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C51812A21A61270600C12D9C /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		C5E0ADD71A57E1E600B511E1 = {
@@ -81,6 +138,7 @@
 			children = (
 				C5E0ADE21A57E1E600B511E1 /* Ders17 */,
 				C5E0ADF81A57E1E600B511E1 /* Ders17Tests */,
+				C51812A01A61270600C12D9C /* HavaDurumu */,
 				C5E0ADE11A57E1E600B511E1 /* Products */,
 				FAA6FCDCB5429013A094E4E6 /* Pods */,
 				8D8AF69ED8DA501D75024EC8 /* Frameworks */,
@@ -92,6 +150,7 @@
 			children = (
 				C5E0ADE01A57E1E600B511E1 /* Ders17.app */,
 				C5E0ADF51A57E1E600B511E1 /* Ders17Tests.xctest */,
+				C518129D1A61270600C12D9C /* HavaDurumu.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -150,6 +209,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		C518129C1A61270600C12D9C /* HavaDurumu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C51812AC1A61270600C12D9C /* Build configuration list for PBXNativeTarget "HavaDurumu" */;
+			buildPhases = (
+				C51812991A61270600C12D9C /* Sources */,
+				C518129A1A61270600C12D9C /* Frameworks */,
+				C518129B1A61270600C12D9C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HavaDurumu;
+			productName = HavaDurumu;
+			productReference = C518129D1A61270600C12D9C /* HavaDurumu.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		C5E0ADDF1A57E1E600B511E1 /* Ders17 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C5E0ADFF1A57E1E600B511E1 /* Build configuration list for PBXNativeTarget "Ders17" */;
@@ -159,10 +235,12 @@
 				C5E0ADDD1A57E1E600B511E1 /* Frameworks */,
 				C5E0ADDE1A57E1E600B511E1 /* Resources */,
 				7C1036D377C1E3FAC8D4BF07 /* Copy Pods Resources */,
+				C51812AD1A61270600C12D9C /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				C51812A81A61270600C12D9C /* PBXTargetDependency */,
 			);
 			name = Ders17;
 			productName = Ders17;
@@ -196,6 +274,9 @@
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = Wissen;
 				TargetAttributes = {
+					C518129C1A61270600C12D9C = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
 					C5E0ADDF1A57E1E600B511E1 = {
 						CreatedOnToolsVersion = 6.1.1;
 					};
@@ -220,11 +301,20 @@
 			targets = (
 				C5E0ADDF1A57E1E600B511E1 /* Ders17 */,
 				C5E0ADF41A57E1E600B511E1 /* Ders17Tests */,
+				C518129C1A61270600C12D9C /* HavaDurumu */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C518129B1A61270600C12D9C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C51812A61A61270600C12D9C /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C5E0ADDE1A57E1E600B511E1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -278,6 +368,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C51812991A61270600C12D9C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C51812A41A61270600C12D9C /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C5E0ADDC1A57E1E600B511E1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -301,6 +399,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		C51812A81A61270600C12D9C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C518129C1A61270600C12D9C /* HavaDurumu */;
+			targetProxy = C51812A71A61270600C12D9C /* PBXContainerItemProxy */;
+		};
 		C5E0ADF71A57E1E600B511E1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C5E0ADDF1A57E1E600B511E1 /* Ders17 */;
@@ -328,6 +431,30 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		C51812AA1A61270600C12D9C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = HavaDurumu/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		C51812AB1A61270600C12D9C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = HavaDurumu/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		C5E0ADFD1A57E1E600B511E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -410,6 +537,7 @@
 			baseConfigurationReference = F2D949EB3BF28C845CE1C9BA /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Ders17/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -422,6 +550,7 @@
 			baseConfigurationReference = 06A4C869F62C170E4B9FE343 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Ders17/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -466,6 +595,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C51812AC1A61270600C12D9C /* Build configuration list for PBXNativeTarget "HavaDurumu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C51812AA1A61270600C12D9C /* Debug */,
+				C51812AB1A61270600C12D9C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		C5E0ADDB1A57E1E600B511E1 /* Build configuration list for PBXProject "Ders17" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
