@@ -37,29 +37,39 @@ class WeatherService: NSObject {
         manager.GET(urlString, parameters:nil, success: { (operation, object) -> Void in
             // Çağrı başarılı olursa burası çalışacak
             
-            var weather = Weather()
             
-            if let main:AnyObject = object["main"] {
-                if let temp:Float = main["temp"] as? Float {
-                    weather.temprature = temp
+            if let code = object["cod"] as? String {
+                if code == "404" {
+                    result(weather:nil)
                 }
-            }
-            
-            if let weatherArray = object["weather"] as? Array<AnyObject> {
-                if let weatherObject:AnyObject = weatherArray.first {
+                else {
+                    var weather = Weather()
                     
-                    if let description = weatherObject["description"] as? String {
-                        weather.desc = description
+                    if let main:AnyObject = object["main"] {
+                        if let temp:Float = main["temp"] as? Float {
+                            weather.temprature = temp
+                        }
                     }
-                    if let icon = weatherObject["icon"] as? String {
-                        weather.icon = icon
+                    
+                    if let weatherArray = object["weather"] as? Array<AnyObject> {
+                        if let weatherObject:AnyObject = weatherArray.first {
+                            
+                            if let description = weatherObject["description"] as? String {
+                                weather.desc = description
+                            }
+                            if let icon = weatherObject["icon"] as? String {
+                                weather.icon = icon
+                            }
+                        }
                     }
+                    
+                    weather.unit = unit
+                    
+                    result(weather:weather)
                 }
             }
             
-            weather.unit = unit
-            
-            result(weather:weather)
+
             
         }) { (operation, error) -> Void in
             //Çağrı başarısız olursa burası çalışacak

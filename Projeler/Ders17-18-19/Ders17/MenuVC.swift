@@ -10,8 +10,9 @@ import UIKit
 
 class MenuVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-    
-    @IBOutlet weak var lblSelectedCity: UILabel!    
+    var userDefaults = NSUserDefaults(suiteName:"group.wissen.ExtensionSharingDefaults")!
+
+    @IBOutlet weak var lblSelectedCity: UILabel!
     @IBOutlet weak var tblCities: UITableView!
     
     var cities:Array<String>!
@@ -27,13 +28,14 @@ class MenuVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             "Amasya",
             "Ankara",
             "İstanbul",
+            "BALIKESİR",
             "İzmir"]
     }
 
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        if let city:String = NSUserDefaults.standardUserDefaults().valueForKey(keyCity) as? String {
+        if let city:String = userDefaults.valueForKey(keyCity) as? String {
             lblSelectedCity.text = city
         }
         else {
@@ -64,8 +66,8 @@ class MenuVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         var cityName = cities[indexPath.row]
         lblSelectedCity.text = cityName
         
-        NSUserDefaults.standardUserDefaults().setValue(cityName, forKey: keyCity)
-        NSUserDefaults.standardUserDefaults().synchronize()
+        userDefaults.setValue(cityName, forKey: keyCity)
+        userDefaults.synchronize()
         
         slidingViewController().resetTopViewAnimated(true)
         

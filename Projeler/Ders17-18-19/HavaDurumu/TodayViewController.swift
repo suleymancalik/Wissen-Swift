@@ -11,9 +11,18 @@ import NotificationCenter
 
 class TodayViewController: UIViewController, NCWidgetProviding {
         
+    @IBOutlet weak var lblHello: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view from its nib.
+
+        var userDefaults = NSUserDefaults(suiteName: "group.wissen.ExtensionSharingDefaults")!
+        var temprature = userDefaults.valueForKey("Temprature") as? Float
+        var city = userDefaults.valueForKey("City") as String
+        if let temprature = temprature {
+            lblHello.text = "\(city) \(temprature)"
+        }
+        
     }
     
     override func didReceiveMemoryWarning() {

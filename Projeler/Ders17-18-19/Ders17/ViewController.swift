@@ -11,10 +11,11 @@ import UIKit
 let keyCity = "City"
 let keyUnit = "Unit"
 let keyLanguage = "Language"
-
+let keyTemprature = "Temprature"
 
 class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
+    var userDefaults = NSUserDefaults(suiteName:"group.wissen.ExtensionSharingDefaults")!
     
     @IBOutlet weak var lblCityName: UILabel!
     @IBOutlet weak var lblTemprature: UILabel!
@@ -29,8 +30,6 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        var userDefaults = NSUserDefaults.standardUserDefaults()
         
         if userDefaults.valueForKey(keyUnit) == nil {
            userDefaults.setValue(0, forKey: keyUnit)
@@ -68,7 +67,6 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     func refreshUI() {
         
-        var userDefaults = NSUserDefaults.standardUserDefaults()
         if let city:String = userDefaults.valueForKey(keyCity) as? String {
             lblCityName.text = city
             
@@ -103,11 +101,9 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     func refreshWeather() {
         
-        var userDefaults = NSUserDefaults.standardUserDefaults()
         if let cityName:String = userDefaults.valueForKey(keyCity) as? String{
             var unitNo:Int = userDefaults.valueForKey(keyUnit) as Int
             var languageNo:Int = userDefaults.valueForKey(keyLanguage) as Int
-            
             
             var languageCode = languages[languageNo].1
             var unit = WeatherUnit(rawValue: unitNo)!
@@ -115,7 +111,14 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
             SVProgressHUD.showWithMaskType(SVProgressHUDMaskType.Black)
             weatherService.getWeather(cityName, language:languageCode, unit:unit) { (weather) -> () in
                 SVProgressHUD.dismiss()
-                self.currentWeather = weather
+                
+                if weather != nil {
+                    self.currentWeather = weather
+                    
+                    self.userDefaults.setValue(weather.temprature, forKey:keyTemprature)
+                    self.userDefaults.synchronize()
+                }
+                
                 self.refreshUI()
             }
         }
@@ -128,8 +131,8 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     //MARK: - Actions
     
     @IBAction func segmentValueChanged(sender: UISegmentedControl) {
-        NSUserDefaults.standardUserDefaults().setValue(sender.selectedSegmentIndex, forKey:keyUnit)
-        NSUserDefaults.standardUserDefaults().synchronize()
+        userDefaults.setValue(sender.selectedSegmentIndex, forKey:keyUnit)
+        userDefaults.synchronize()
         refreshWeather()
     }
     
@@ -153,8 +156,8 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
 //        var languageCode = languages[row].1
         
-        NSUserDefaults.standardUserDefaults().setValue(row, forKey: keyLanguage)
-        NSUserDefaults.standardUserDefaults().synchronize()
+        userDefaults.setValue(row, forKey: keyLanguage)
+        userDefaults.synchronize()
         refreshWeather()
     }
     
