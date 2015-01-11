@@ -122,7 +122,6 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
                 self.refreshUI()
             }
         }
-
         
     }
     

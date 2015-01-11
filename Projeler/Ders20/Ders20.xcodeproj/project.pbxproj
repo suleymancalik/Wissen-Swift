@@ -1,0 +1,422 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C55BE1721A626CDC007246EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55BE1711A626CDC007246EF /* AppDelegate.swift */; };
+		C55BE1741A626CDC007246EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55BE1731A626CDC007246EF /* ViewController.swift */; };
+		C55BE1771A626CDC007246EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C55BE1751A626CDC007246EF /* Main.storyboard */; };
+		C55BE1791A626CDC007246EF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C55BE1781A626CDC007246EF /* Images.xcassets */; };
+		C55BE17C1A626CDC007246EF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C55BE17A1A626CDC007246EF /* LaunchScreen.xib */; };
+		C55BE1881A626CDC007246EF /* Ders20Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55BE1871A626CDC007246EF /* Ders20Tests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C55BE1821A626CDC007246EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C55BE1641A626CDC007246EF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C55BE16B1A626CDC007246EF;
+			remoteInfo = Ders20;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C55BE16C1A626CDC007246EF /* Ders20.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ders20.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C55BE1701A626CDC007246EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C55BE1711A626CDC007246EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C55BE1731A626CDC007246EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C55BE1761A626CDC007246EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C55BE1781A626CDC007246EF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C55BE17B1A626CDC007246EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		C55BE1811A626CDC007246EF /* Ders20Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Ders20Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C55BE1861A626CDC007246EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C55BE1871A626CDC007246EF /* Ders20Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ders20Tests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C55BE1691A626CDC007246EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C55BE17E1A626CDC007246EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C55BE1631A626CDC007246EF = {
+			isa = PBXGroup;
+			children = (
+				C55BE16E1A626CDC007246EF /* Ders20 */,
+				C55BE1841A626CDC007246EF /* Ders20Tests */,
+				C55BE16D1A626CDC007246EF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C55BE16D1A626CDC007246EF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C55BE16C1A626CDC007246EF /* Ders20.app */,
+				C55BE1811A626CDC007246EF /* Ders20Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C55BE16E1A626CDC007246EF /* Ders20 */ = {
+			isa = PBXGroup;
+			children = (
+				C55BE1711A626CDC007246EF /* AppDelegate.swift */,
+				C55BE1731A626CDC007246EF /* ViewController.swift */,
+				C55BE1751A626CDC007246EF /* Main.storyboard */,
+				C55BE1781A626CDC007246EF /* Images.xcassets */,
+				C55BE17A1A626CDC007246EF /* LaunchScreen.xib */,
+				C55BE16F1A626CDC007246EF /* Supporting Files */,
+			);
+			path = Ders20;
+			sourceTree = "<group>";
+		};
+		C55BE16F1A626CDC007246EF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C55BE1701A626CDC007246EF /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C55BE1841A626CDC007246EF /* Ders20Tests */ = {
+			isa = PBXGroup;
+			children = (
+				C55BE1871A626CDC007246EF /* Ders20Tests.swift */,
+				C55BE1851A626CDC007246EF /* Supporting Files */,
+			);
+			path = Ders20Tests;
+			sourceTree = "<group>";
+		};
+		C55BE1851A626CDC007246EF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C55BE1861A626CDC007246EF /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C55BE16B1A626CDC007246EF /* Ders20 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C55BE18B1A626CDC007246EF /* Build configuration list for PBXNativeTarget "Ders20" */;
+			buildPhases = (
+				C55BE1681A626CDC007246EF /* Sources */,
+				C55BE1691A626CDC007246EF /* Frameworks */,
+				C55BE16A1A626CDC007246EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Ders20;
+			productName = Ders20;
+			productReference = C55BE16C1A626CDC007246EF /* Ders20.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C55BE1801A626CDC007246EF /* Ders20Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C55BE18E1A626CDC007246EF /* Build configuration list for PBXNativeTarget "Ders20Tests" */;
+			buildPhases = (
+				C55BE17D1A626CDC007246EF /* Sources */,
+				C55BE17E1A626CDC007246EF /* Frameworks */,
+				C55BE17F1A626CDC007246EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C55BE1831A626CDC007246EF /* PBXTargetDependency */,
+			);
+			name = Ders20Tests;
+			productName = Ders20Tests;
+			productReference = C55BE1811A626CDC007246EF /* Ders20Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C55BE1641A626CDC007246EF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = Wissen;
+				TargetAttributes = {
+					C55BE16B1A626CDC007246EF = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					C55BE1801A626CDC007246EF = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = C55BE16B1A626CDC007246EF;
+					};
+				};
+			};
+			buildConfigurationList = C55BE1671A626CDC007246EF /* Build configuration list for PBXProject "Ders20" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C55BE1631A626CDC007246EF;
+			productRefGroup = C55BE16D1A626CDC007246EF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C55BE16B1A626CDC007246EF /* Ders20 */,
+				C55BE1801A626CDC007246EF /* Ders20Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C55BE16A1A626CDC007246EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C55BE1771A626CDC007246EF /* Main.storyboard in Resources */,
+				C55BE17C1A626CDC007246EF /* LaunchScreen.xib in Resources */,
+				C55BE1791A626CDC007246EF /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C55BE17F1A626CDC007246EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C55BE1681A626CDC007246EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C55BE1741A626CDC007246EF /* ViewController.swift in Sources */,
+				C55BE1721A626CDC007246EF /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C55BE17D1A626CDC007246EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C55BE1881A626CDC007246EF /* Ders20Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C55BE1831A626CDC007246EF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C55BE16B1A626CDC007246EF /* Ders20 */;
+			targetProxy = C55BE1821A626CDC007246EF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C55BE1751A626CDC007246EF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C55BE1761A626CDC007246EF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C55BE17A1A626CDC007246EF /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C55BE17B1A626CDC007246EF /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C55BE1891A626CDC007246EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		C55BE18A1A626CDC007246EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C55BE18C1A626CDC007246EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Ders20/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C55BE18D1A626CDC007246EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Ders20/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		C55BE18F1A626CDC007246EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Ders20Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ders20.app/Ders20";
+			};
+			name = Debug;
+		};
+		C55BE1901A626CDC007246EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Ders20Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ders20.app/Ders20";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C55BE1671A626CDC007246EF /* Build configuration list for PBXProject "Ders20" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C55BE1891A626CDC007246EF /* Debug */,
+				C55BE18A1A626CDC007246EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C55BE18B1A626CDC007246EF /* Build configuration list for PBXNativeTarget "Ders20" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C55BE18C1A626CDC007246EF /* Debug */,
+				C55BE18D1A626CDC007246EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C55BE18E1A626CDC007246EF /* Build configuration list for PBXNativeTarget "Ders20Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C55BE18F1A626CDC007246EF /* Debug */,
+				C55BE1901A626CDC007246EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C55BE1641A626CDC007246EF /* Project object */;
+}
