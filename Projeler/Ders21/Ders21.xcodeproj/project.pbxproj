@@ -407,6 +407,7 @@
 				C57809911A6A55A5005180A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C57809921A6A55A5005180A4 /* Build configuration list for PBXNativeTarget "Ders21Tests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +416,7 @@
 				C57809941A6A55A5005180A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

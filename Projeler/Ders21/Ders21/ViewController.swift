@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
 
@@ -25,27 +26,53 @@ class ViewController: UIViewController {
     
     
     
+    //MARK: - Utility Methods
+    
+    func changeCount(newCount:Int) {
+        count = newCount
+        userDefaults.setInteger(count, forKey: keySayac)
+        userDefaults.synchronize()
+        lblCount.text = "\(count)"
+    }
+    
+    func incrementCount() {
+        changeCount(count + 1)
+    }
+
+    
+    func handleShake() {
+
+        changeCount(0)
+        
+        // Bunlari kullanabilmek icin yukarida AVFoundation'i import ediyoruz
+        // Bu satir telefonu titretiyor
+        AudioServicesPlaySystemSound(UInt32(kSystemSoundID_Vibrate))
+        
+        //Bu satir 1322 kodlu sistem sesini caliyor
+        // 1000'dden itibaren degisik sesler denenebilir
+        AudioServicesPlaySystemSound(1322)
+    }
+    
+    
     //MARK: - Action Methods
     
+    // Sallama hareketini yakalamak icin yaziyoruz
     override func canBecomeFirstResponder() -> Bool {
         return true
     }
     
+    // Bir hareket sonlandiginda burasi calisiyor
     override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent) {
+        
+        // Arguman olarak gelen hareket "Sallama" mi diye kontrol ediyoruz
         if motion == UIEventSubtype.MotionShake {
-            count = 0
-            userDefaults.setInteger(count, forKey: keySayac)
-            userDefaults.synchronize()
-            lblCount.text = "\(count)"
+            handleShake()
         }
     }
 
 
     @IBAction func btnCountTapped(sender: UIButton) {
-        count++
-        userDefaults.setInteger(count, forKey: keySayac)
-        userDefaults.synchronize()
-        lblCount.text = "\(count)"
+        incrementCount()
     }
 
 }
