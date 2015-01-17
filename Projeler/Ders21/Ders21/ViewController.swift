@@ -22,6 +22,7 @@ class ViewController: UIViewController {
         
         count = userDefaults.integerForKey(keySayac)
         lblCount.text = "\(count)"
+        
     }
     
     
@@ -51,6 +52,27 @@ class ViewController: UIViewController {
         //Bu satir 1322 kodlu sistem sesini caliyor
         // 1000'dden itibaren degisik sesler denenebilir
         AudioServicesPlaySystemSound(1322)
+        
+        
+        animateScreen()
+    }
+    
+    
+    func animateScreen() {
+        
+        var animLbl = CABasicAnimation(keyPath:"transform")
+        animLbl.duration = 0.2
+        var scale = CATransform3DMakeScale(10, 2, 1)
+        animLbl.toValue = NSValue(CATransform3D:scale)
+        animLbl.autoreverses = true
+        lblCount.layer.addAnimation(animLbl, forKey: nil)
+        
+        
+        var animAlpha = CABasicAnimation(keyPath: "opacity")
+        animAlpha.duration = 0.2
+        animAlpha.toValue = 0
+        animAlpha.autoreverses = true
+        lblCount.layer.addAnimation(animAlpha, forKey: nil)
     }
     
     
