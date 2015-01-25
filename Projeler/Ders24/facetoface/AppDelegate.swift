@@ -16,7 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-
         
         Parse.enableLocalDatastore()
         Parse.setApplicationId("UCVLMahElBOXVkICZsbdJ5kM576DOIk6CdD5cha3", clientKey: "qKamq0NYgb10n3KHERdlK1XrvZi90WSLeGZgj7ad")
@@ -32,6 +31,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         println("Push Ayarlarina kaydoluyoruz")
         application.registerUserNotificationSettings(settings)
         ///////////////////////////////////////////////////////
+        
+        GAI.sharedInstance().trackUncaughtExceptions = true
+        GAI.sharedInstance().dispatchInterval = 10
+        GAI.sharedInstance().logger.logLevel = GAILogLevel.Info
+        GAI.sharedInstance().trackerWithTrackingId("UA-29302071-2")
         
         return true
     }

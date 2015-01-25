@@ -1,13 +1,18 @@
 PODS:
   - Bolts (1.1.3)
+  - GoogleAnalytics-iOS-SDK (3.10):
+    - GoogleAnalytics-iOS-SDK/Core (= 3.10)
+  - GoogleAnalytics-iOS-SDK/Core (3.10)
   - Parse (1.6.2):
     - Bolts (~> 1.1)
 
 DEPENDENCIES:
+  - GoogleAnalytics-iOS-SDK
   - Parse
 
 SPEC CHECKSUMS:
   Bolts: 3db0a875235e0c9042b013af13af0f00f79b102c
+  GoogleAnalytics-iOS-SDK: f422062075d9ccb1ea8d783fc5ba3829461e9502
   Parse: 60d65108fe39da77ec16c9e51d74b4d296b21424
 
 COCOAPODS: 0.35.0

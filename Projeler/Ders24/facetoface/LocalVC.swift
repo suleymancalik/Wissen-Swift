@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class LocalVC: UIViewController {
+class LocalVC: GAITrackedViewController {
     
     
     @IBOutlet weak var lblInfo: UILabel!
@@ -21,6 +21,12 @@ class LocalVC: UIViewController {
         refresh()
     }
     
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        screenName = "LocalVC"
+    }
     
     func refresh() {
         var query = PFQuery(className: "Para")

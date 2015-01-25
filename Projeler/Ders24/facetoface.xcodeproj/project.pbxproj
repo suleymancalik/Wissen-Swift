@@ -44,6 +44,7 @@
 		356ABA3EB56F4C8A62287EEF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		4F484EA23EEB392A7E14292E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C50030F71A74E39C00C926E9 /* LocalVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalVC.swift; sourceTree = "<group>"; };
+		C50030F91A74EC6900C926E9 /* Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridge.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +97,7 @@
 				13BE33B51A73BE9E00905A29 /* facetoface.xcdatamodeld */,
 				13BE33B11A73BE9E00905A29 /* Supporting Files */,
 				C50030F71A74E39C00C926E9 /* LocalVC.swift */,
+				C50030F91A74EC6900C926E9 /* Bridge.h */,
 			);
 			path = facetoface;
 			sourceTree = "<group>";
@@ -409,6 +411,7 @@
 				INFOPLIST_FILE = facetoface/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = facetoface/Bridge.h;
 			};
 			name = Debug;
 		};
@@ -420,6 +423,7 @@
 				INFOPLIST_FILE = facetoface/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = facetoface/Bridge.h;
 			};
 			name = Release;
 		};
