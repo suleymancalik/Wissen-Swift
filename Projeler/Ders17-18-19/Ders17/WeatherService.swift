@@ -37,9 +37,10 @@ class WeatherService: NSObject {
         manager.GET(urlString, parameters:nil, success: { (operation, object) -> Void in
             // Çağrı başarılı olursa burası çalışacak
             
+            println(object)
             
-            if let code = object["cod"] as? String {
-                if code == "404" {
+            if let code = object["cod"] as? Int {
+                if code == 404 {
                     result(weather:nil)
                 }
                 else {
@@ -67,6 +68,9 @@ class WeatherService: NSObject {
                     
                     result(weather:weather)
                 }
+            }
+            else {
+                println("")
             }
             
 
