@@ -1,0 +1,518 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C51812B11A614B0E00C12D9C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51812B01A614B0E00C12D9C /* Constants.swift */; };
+		C59B13921A627F2100C5ACA2 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59B13911A627F2100C5ACA2 /* FeedCell.swift */; };
+		C5CB9CF91A45A1620027B97B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CB9CF81A45A1620027B97B /* AppDelegate.swift */; };
+		C5CB9CFE1A45A1620027B97B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5CB9CFC1A45A1620027B97B /* Main.storyboard */; };
+		C5CB9D001A45A1620027B97B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5CB9CFF1A45A1620027B97B /* Images.xcassets */; };
+		C5CB9D031A45A1620027B97B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5CB9D011A45A1620027B97B /* LaunchScreen.xib */; };
+		C5CB9D0F1A45A1620027B97B /* SuleymanCalikTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CB9D0E1A45A1620027B97B /* SuleymanCalikTests.swift */; };
+		C5CB9D191A45A6C80027B97B /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5CB9D181A45A6C80027B97B /* Parse.framework */; };
+		C5CB9D1B1A45A7090027B97B /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5CB9D1A1A45A7090027B97B /* CFNetwork.framework */; };
+		C5CB9D1D1A45A8840027B97B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5CB9D1C1A45A8840027B97B /* AudioToolbox.framework */; };
+		C5CB9D1F1A45A89D0027B97B /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C5CB9D1E1A45A89D0027B97B /* libsqlite3.dylib */; };
+		C5CB9D211A45A8B30027B97B /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5CB9D201A45A8B30027B97B /* MobileCoreServices.framework */; };
+		C5CB9D231A45A8C30027B97B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5CB9D221A45A8C30027B97B /* SystemConfiguration.framework */; };
+		C5CB9D251A45A8FE0027B97B /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5CB9D241A45A8FE0027B97B /* Bolts.framework */; };
+		C5D044551A46E82100677759 /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D044541A46E82100677759 /* WelcomeVC.swift */; };
+		C5D044571A46E84400677759 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D044561A46E84400677759 /* LoginVC.swift */; };
+		C5D044591A46E85100677759 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D044581A46E85100677759 /* FeedVC.swift */; };
+		C5D0445B1A46E86900677759 /* NewPostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D0445A1A46E86900677759 /* NewPostVC.swift */; };
+		C5D0445D1A46E87A00677759 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D0445C1A46E87A00677759 /* ProfileVC.swift */; };
+		C5D044641A46EF9C00677759 /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D044631A46EF9C00677759 /* SignupVC.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C5CB9D091A45A1620027B97B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C5CB9CEB1A45A1620027B97B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C5CB9CF21A45A1620027B97B;
+			remoteInfo = SuleymanCalik;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C51812B01A614B0E00C12D9C /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = ../Constants.swift; sourceTree = "<group>"; };
+		C59B13911A627F2100C5ACA2 /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		C5CB9CF31A45A1620027B97B /* SuleymanCalik.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuleymanCalik.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5CB9CF71A45A1620027B97B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5CB9CF81A45A1620027B97B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
+		C5CB9CFD1A45A1620027B97B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C5CB9CFF1A45A1620027B97B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C5CB9D021A45A1620027B97B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		C5CB9D081A45A1620027B97B /* SuleymanCalikTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuleymanCalikTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5CB9D0D1A45A1620027B97B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5CB9D0E1A45A1620027B97B /* SuleymanCalikTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuleymanCalikTests.swift; sourceTree = "<group>"; };
+		C5CB9D181A45A6C80027B97B /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		C5CB9D1A1A45A7090027B97B /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		C5CB9D1C1A45A8840027B97B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		C5CB9D1E1A45A89D0027B97B /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		C5CB9D201A45A8B30027B97B /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		C5CB9D221A45A8C30027B97B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		C5CB9D241A45A8FE0027B97B /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		C5D044541A46E82100677759 /* WelcomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
+		C5D044561A46E84400677759 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		C5D044581A46E85100677759 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		C5D0445A1A46E86900677759 /* NewPostVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPostVC.swift; sourceTree = "<group>"; };
+		C5D0445C1A46E87A00677759 /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		C5D044631A46EF9C00677759 /* SignupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C5CB9CF01A45A1620027B97B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5CB9D231A45A8C30027B97B /* SystemConfiguration.framework in Frameworks */,
+				C5CB9D211A45A8B30027B97B /* MobileCoreServices.framework in Frameworks */,
+				C5CB9D1F1A45A89D0027B97B /* libsqlite3.dylib in Frameworks */,
+				C5CB9D1D1A45A8840027B97B /* AudioToolbox.framework in Frameworks */,
+				C5CB9D1B1A45A7090027B97B /* CFNetwork.framework in Frameworks */,
+				C5CB9D191A45A6C80027B97B /* Parse.framework in Frameworks */,
+				C5CB9D251A45A8FE0027B97B /* Bolts.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5CB9D051A45A1620027B97B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C59B138F1A627ECE00C5ACA2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C5CB9CF81A45A1620027B97B /* AppDelegate.swift */,
+				C51812B01A614B0E00C12D9C /* Constants.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C59B13901A627EFC00C5ACA2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C59B13911A627F2100C5ACA2 /* FeedCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C5CB9CEA1A45A1620027B97B = {
+			isa = PBXGroup;
+			children = (
+				C5CB9D261A45A9770027B97B /* Libraries */,
+				C5CB9CF51A45A1620027B97B /* SuleymanCalik */,
+				C5CB9D0B1A45A1620027B97B /* SuleymanCalikTests */,
+				C5CB9CF41A45A1620027B97B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C5CB9CF41A45A1620027B97B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C5CB9CF31A45A1620027B97B /* SuleymanCalik.app */,
+				C5CB9D081A45A1620027B97B /* SuleymanCalikTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C5CB9CF51A45A1620027B97B /* SuleymanCalik */ = {
+			isa = PBXGroup;
+			children = (
+				C5CB9CFC1A45A1620027B97B /* Main.storyboard */,
+				C5D044531A46E7FE00677759 /* ViewControllers */,
+				C59B13901A627EFC00C5ACA2 /* Views */,
+				C59B138F1A627ECE00C5ACA2 /* Models */,
+				C5CB9CF61A45A1620027B97B /* Supporting Files */,
+			);
+			path = SuleymanCalik;
+			sourceTree = "<group>";
+		};
+		C5CB9CF61A45A1620027B97B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C5CB9CFF1A45A1620027B97B /* Images.xcassets */,
+				C5CB9D011A45A1620027B97B /* LaunchScreen.xib */,
+				C5CB9CF71A45A1620027B97B /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C5CB9D0B1A45A1620027B97B /* SuleymanCalikTests */ = {
+			isa = PBXGroup;
+			children = (
+				C5CB9D0E1A45A1620027B97B /* SuleymanCalikTests.swift */,
+				C5CB9D0C1A45A1620027B97B /* Supporting Files */,
+			);
+			path = SuleymanCalikTests;
+			sourceTree = "<group>";
+		};
+		C5CB9D0C1A45A1620027B97B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C5CB9D0D1A45A1620027B97B /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C5CB9D261A45A9770027B97B /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				C5CB9D1E1A45A89D0027B97B /* libsqlite3.dylib */,
+				C5CB9D241A45A8FE0027B97B /* Bolts.framework */,
+				C5CB9D221A45A8C30027B97B /* SystemConfiguration.framework */,
+				C5CB9D201A45A8B30027B97B /* MobileCoreServices.framework */,
+				C5CB9D1C1A45A8840027B97B /* AudioToolbox.framework */,
+				C5CB9D1A1A45A7090027B97B /* CFNetwork.framework */,
+				C5CB9D181A45A6C80027B97B /* Parse.framework */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		C5D044531A46E7FE00677759 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C5D044541A46E82100677759 /* WelcomeVC.swift */,
+				C5D044561A46E84400677759 /* LoginVC.swift */,
+				C5D044631A46EF9C00677759 /* SignupVC.swift */,
+				C5D044581A46E85100677759 /* FeedVC.swift */,
+				C5D0445A1A46E86900677759 /* NewPostVC.swift */,
+				C5D0445C1A46E87A00677759 /* ProfileVC.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C5CB9CF21A45A1620027B97B /* SuleymanCalik */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C5CB9D121A45A1620027B97B /* Build configuration list for PBXNativeTarget "SuleymanCalik" */;
+			buildPhases = (
+				C5CB9CEF1A45A1620027B97B /* Sources */,
+				C5CB9CF01A45A1620027B97B /* Frameworks */,
+				C5CB9CF11A45A1620027B97B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SuleymanCalik;
+			productName = SuleymanCalik;
+			productReference = C5CB9CF31A45A1620027B97B /* SuleymanCalik.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C5CB9D071A45A1620027B97B /* SuleymanCalikTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C5CB9D151A45A1620027B97B /* Build configuration list for PBXNativeTarget "SuleymanCalikTests" */;
+			buildPhases = (
+				C5CB9D041A45A1620027B97B /* Sources */,
+				C5CB9D051A45A1620027B97B /* Frameworks */,
+				C5CB9D061A45A1620027B97B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C5CB9D0A1A45A1620027B97B /* PBXTargetDependency */,
+			);
+			name = SuleymanCalikTests;
+			productName = SuleymanCalikTests;
+			productReference = C5CB9D081A45A1620027B97B /* SuleymanCalikTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C5CB9CEB1A45A1620027B97B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = Wissen;
+				TargetAttributes = {
+					C5CB9CF21A45A1620027B97B = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					C5CB9D071A45A1620027B97B = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = C5CB9CF21A45A1620027B97B;
+					};
+				};
+			};
+			buildConfigurationList = C5CB9CEE1A45A1620027B97B /* Build configuration list for PBXProject "SuleymanCalik" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C5CB9CEA1A45A1620027B97B;
+			productRefGroup = C5CB9CF41A45A1620027B97B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C5CB9CF21A45A1620027B97B /* SuleymanCalik */,
+				C5CB9D071A45A1620027B97B /* SuleymanCalikTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C5CB9CF11A45A1620027B97B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5CB9CFE1A45A1620027B97B /* Main.storyboard in Resources */,
+				C5CB9D031A45A1620027B97B /* LaunchScreen.xib in Resources */,
+				C5CB9D001A45A1620027B97B /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5CB9D061A45A1620027B97B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C5CB9CEF1A45A1620027B97B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5D044641A46EF9C00677759 /* SignupVC.swift in Sources */,
+				C5D0445D1A46E87A00677759 /* ProfileVC.swift in Sources */,
+				C5D044591A46E85100677759 /* FeedVC.swift in Sources */,
+				C5D044551A46E82100677759 /* WelcomeVC.swift in Sources */,
+				C5D0445B1A46E86900677759 /* NewPostVC.swift in Sources */,
+				C5CB9CF91A45A1620027B97B /* AppDelegate.swift in Sources */,
+				C5D044571A46E84400677759 /* LoginVC.swift in Sources */,
+				C51812B11A614B0E00C12D9C /* Constants.swift in Sources */,
+				C59B13921A627F2100C5ACA2 /* FeedCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5CB9D041A45A1620027B97B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5CB9D0F1A45A1620027B97B /* SuleymanCalikTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C5CB9D0A1A45A1620027B97B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C5CB9CF21A45A1620027B97B /* SuleymanCalik */;
+			targetProxy = C5CB9D091A45A1620027B97B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C5CB9CFC1A45A1620027B97B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C5CB9CFD1A45A1620027B97B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C5CB9D011A45A1620027B97B /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C5CB9D021A45A1620027B97B /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C5CB9D101A45A1620027B97B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C5CB9D111A45A1620027B97B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C5CB9D131A45A1620027B97B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = SuleymanCalik/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C5CB9D141A45A1620027B97B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = SuleymanCalik/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		C5CB9D161A45A1620027B97B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SuleymanCalikTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SuleymanCalik.app/SuleymanCalik";
+			};
+			name = Debug;
+		};
+		C5CB9D171A45A1620027B97B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SuleymanCalikTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SuleymanCalik.app/SuleymanCalik";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C5CB9CEE1A45A1620027B97B /* Build configuration list for PBXProject "SuleymanCalik" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5CB9D101A45A1620027B97B /* Debug */,
+				C5CB9D111A45A1620027B97B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C5CB9D121A45A1620027B97B /* Build configuration list for PBXNativeTarget "SuleymanCalik" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5CB9D131A45A1620027B97B /* Debug */,
+				C5CB9D141A45A1620027B97B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C5CB9D151A45A1620027B97B /* Build configuration list for PBXNativeTarget "SuleymanCalikTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5CB9D161A45A1620027B97B /* Debug */,
+				C5CB9D171A45A1620027B97B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C5CB9CEB1A45A1620027B97B /* Project object */;
+}
